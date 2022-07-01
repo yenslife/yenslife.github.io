@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yenslife.top/2022/06/26/hello-world/</loc>
+    <loc>https://yenslife.top/2022/06/26/hello-world/</loc>
     
     <lastmod>2022-07-01</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://yenslife.top/404.html</loc>
+    <loc>https://yenslife.top/404.html</loc>
     
     <lastmod>2022-07-01</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://yenslife.top/2022/06/26/anya/</loc>
+    <loc>https://yenslife.top/2022/06/26/anya/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://yenslife.top/about/index.html</loc>
+    <loc>https://yenslife.top/about/index.html</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://yenslife.top/links/index.html</loc>
+    <loc>https://yenslife.top/links/index.html</loc>
     
     <lastmod>2022-06-26</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://yenslife.top/categories/index.html</loc>
+    <loc>https://yenslife.top/categories/index.html</loc>
     
     <lastmod>2022-06-26</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://yenslife.top/tags/index.html</loc>
+    <loc>https://yenslife.top/tags/index.html</loc>
     
     <lastmod>2022-06-26</lastmod>
     
@@ -66,7 +66,7 @@
   
 
   <url>
-    <loc>http://yenslife.top/</loc>
+    <loc>https://yenslife.top/</loc>
     <lastmod>2022-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -74,21 +74,21 @@
 
   
   <url>
-    <loc>http://yenslife.top/tags/%E6%B8%AC%E8%A9%A6%E7%94%A8/</loc>
+    <loc>https://yenslife.top/tags/%E6%B8%AC%E8%A9%A6%E7%94%A8/</loc>
     <lastmod>2022-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yenslife.top/tags/hexo%E8%AE%9A/</loc>
+    <loc>https://yenslife.top/tags/hexo%E8%AE%9A/</loc>
     <lastmod>2022-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yenslife.top/tags/%E5%AE%89%E5%A6%AE%E9%9B%85/</loc>
+    <loc>https://yenslife.top/tags/%E5%AE%89%E5%A6%AE%E9%9B%85/</loc>
     <lastmod>2022-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -97,7 +97,7 @@
 
   
   <url>
-    <loc>http://yenslife.top/categories/%E6%B8%AC%E8%A9%A6%E7%94%A8/</loc>
+    <loc>https://yenslife.top/categories/%E6%B8%AC%E8%A9%A6%E7%94%A8/</loc>
     <lastmod>2022-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
