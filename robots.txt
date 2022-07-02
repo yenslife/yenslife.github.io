@@ -1,0 +1,4 @@
+Sitemap: http://yenslife.top/sitemap.xml
+
+User-agent: *
+Disallow:
