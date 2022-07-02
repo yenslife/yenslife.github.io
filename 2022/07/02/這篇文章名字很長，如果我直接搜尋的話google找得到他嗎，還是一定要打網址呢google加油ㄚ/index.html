@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<title>標籤-歡迎光臨！</title>
+<title>這篇文章名字很長，如果我直接搜尋的話google找得到他嗎，還是一定要打網址呢google加油ㄚ-歡迎光臨！</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,8 +11,9 @@
 <link rel="stylesheet" href="/css/index.css">
 
 
-<meta name="keywords" content="yenslife,海狸大師,小潘,學習心得,小潘播落格,海狸大師部落格,潘駿諺">
-<meta name="description" content="記錄我的生活心得與學習筆記">
+
+<meta name="keywords" content="test,">
+<meta name="description" content="描述">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -39,7 +40,6 @@
 
 	<body>
 		
-
 	<div class="header">
 		<div class="header-top" id="header-top">
 			<div class="h-left">
@@ -78,13 +78,13 @@
 								
 									
 						
-							<li class="select">
-								<a href="/tags">
-									TAGS 🏷
-								</a>
-								<span class="dot"></span>
-							</li>
-							
+								<li>
+									<a href="/tags">
+										TAGS 🏷
+									</a>
+									<span class="dot"></span>
+								</li>
+								
 									
 						
 								<li>
@@ -293,39 +293,111 @@
 
 </script>
 
-
-<div class="tags">
-    <div class="header-body-background">
-    <div class="header-body-background-content">
-        <span>
-            <!--原本長這樣  <img src="https://i.imgur.com/cHZQ3Jy.jpg" alt="Quiet-home下一頁中間的圖示">-->
-            <img src="https://i.imgur.com/JcFZfLd.png" alt="Quiet">
-        </span>
-        <h2>這邊從標籤找文章ㄛ🏷</h2>
-    </div>
-</div>
-    <div class="tags-content" id="content">
-        <div class="tags-content-data">
-            <h2>4 Tags In Total</h2>
+<div class="post">
+    <div class="post-header-background post-header-color"
+    style="background: url('')" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
             
-                <a href="/tags/%E5%AE%89%E5%A6%AE%E9%9B%85/" class="tag-安妮雅" value="安妮雅">
-                    <span># 安妮雅 <i>1</i> </span>
-                </a>
             
-                <a href="/tags/%E6%B8%AC%E8%A9%A6%E7%94%A8/" class="tag-測試用" value="測試用">
-                    <span># 測試用 <i>2</i> </span>
-                </a>
+            <li><a href="/tags/test">test</a></li>
             
-                <a href="/tags/hexo%E8%AE%9A/" class="tag-hexo讚" value="hexo讚">
-                    <span># hexo讚 <i>1</i> </span>
-                </a>
             
-                <a href="/tags/test/" class="tag-test" value="test">
-                    <span># test <i>1</i> </span>
-                </a>
-            
+        </ul>
+        
+        <h1>這篇文章名字很長，如果我直接搜尋的話google找得到他嗎，還是一定要打網址呢google加油ㄚ</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <g>
+                            <path fill="#12183A"
+                                d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                            </path>
+                        </g>
+                    </svg>
+                
+                <span class="post-header-info-author-text"> <a target="_blank" rel="noopener" href="https://github.com/yenslife">海狸大師</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                </div>
+                <p>2022-07-02 15:26:50</p>
+            </div>
         </div>
     </div>
+</div>
+    <div class="post-content" id="content">
+  <div id="article" class="post-content-info">
+      
+  </div>
+  <div id=""></div>
+</div>
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+
+    
+    <a href="/2022/06/26/anya/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>anya</p>
+        </div>
+    </a>
+    
+</div>
 </div>
 		<div class="footer">
 	<div class="Copyright">
