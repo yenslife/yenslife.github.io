@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<title>標籤:test-歡迎光臨！</title>
+<title>測試評論-歡迎光臨！</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,8 +11,9 @@
 <link rel="stylesheet" href="/css/index.css">
 
 
-<meta name="keywords" content="yenslife,海狸大師,小潘,學習心得,小潘播落格,海狸大師部落格,潘駿諺">
-<meta name="description" content="記錄我的生活心得與學習筆記">
+
+<meta name="keywords" content="test,">
+<meta name="description" content="這次用英文檔名，中文標題試試">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -38,7 +39,6 @@
 
 	<body>
 		
-
 	<div class="header">
 		<div class="header-top" id="header-top">
 			<div class="h-left">
@@ -77,13 +77,13 @@
 								
 									
 						
-							<li class="select">
-								<a href="/tags">
-									TAGS 🏷
-								</a>
-								<span class="dot"></span>
-							</li>
-							
+								<li>
+									<a href="/tags">
+										TAGS 🏷
+									</a>
+									<span class="dot"></span>
+								</li>
+								
 									
 						
 								<li>
@@ -292,48 +292,115 @@
 
 </script>
 
-
-
-
-<div class="tag">
-    <div class="header-body-background">
-    <div class="header-body-background-content">
-        <span>
-            <!--原本長這樣  <img src="https://i.imgur.com/cHZQ3Jy.jpg" alt="Quiet-home下一頁中間的圖示">-->
-            <img src="https://i.imgur.com/JcFZfLd.png" alt="Quiet">
-        </span>
-        <h2>文章標籤：test</h2>
-    </div>
-</div>
-    <div class="tag-content" id="content">
-        <div class="tag-content-data">
-            <div class="grouping">
-    
-        <p>
-            2022
-        </p>
+<div class="post">
+    <div class="post-header-background post-header-color"
+    style="background: url('')" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
+            
+            
+            <li><a href="/tags/test">test</a></li>
+            
+            
+        </ul>
         
-        <a href="/2022/07/03/test-comment/">
-            <span>測試評論</span>
-            <time>07-03</time>
-        </a>
-        
-        <a href="/2022/07/03/english-version-commentable-article/">
-            <span>english-version-commentable-article</span>
-            <time>07-03</time>
-        </a>
-        
-        <a href="/2022/07/02/這篇文章名字很長，如果我直接搜尋的話google找得到他嗎，還是一定要打網址呢google加油ㄚ/">
-            <span>這篇文章名字很長，如果我直接搜尋的話google找得到他嗎，還是一定要打網址呢google加油ㄚ</span>
-            <time>07-02</time>
-        </a>
-        
-        
-</div>
+        <h1>測試評論</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <g>
+                            <path fill="#12183A"
+                                d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                            </path>
+                        </g>
+                    </svg>
+                
+                <span class="post-header-info-author-text"> <a target="_blank" rel="noopener" href="https://github.com/yenslife">海狸大師</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                         <a href="../../../../categories/測試用/">測試用</a>
+                    
+                </div>
+                <p>2022-07-03 18:42:02</p>
+            </div>
         </div>
     </div>
 </div>
+    <div class="post-content" id="content">
+  <div id="article" class="post-content-info">
+      <p>這次用英文檔名，中文標題試試</p>
 
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+
+    
+    <a href="/2022/07/03/english-version-commentable-article/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>english-version-commentable-article</p>
+        </div>
+    </a>
+    
+</div>
+</div>
 		<div class="footer">
 	<div class="Copyright">
 		©2022 By 海狸大師 yenslife 小潘 主題：<a
