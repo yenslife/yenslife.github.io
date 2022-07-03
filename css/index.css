@@ -737,7 +737,10 @@ hue-6-2: #e6c07b
   flex-shrink: 1;
 }
 .home .main .feed-display a .feed-title {
-  padding: 30px 24px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  padding-right: 24px;
+  padding-left: 24px;
   display: flex;
   flex-grow: 1;
   font-size: 20px;
@@ -748,13 +751,13 @@ hue-6-2: #e6c07b
 .home .main .feed-display a img {
   width: 100%;
   height: 200px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   background: linear-gradient(to top, #fffcf9, #fffcf9);
   object-fit: cover;
 }
 .home .main .feed-meat {
   display: flex;
-  padding: 8px 24px 24px 16px;
+  padding: 8px 14px 16px 16px;
   justify-content: space-between;
 }
 .home .main .feed-meat .meat-info {
@@ -1111,7 +1114,7 @@ hue-6-2: #e6c07b
   z-index: 2;
 }
 .post-content-info {
-  margin: 60px 80px;
+  margin: 60px 150px;
   font-size: 1.1rem;
   transition: all 0.4s ease-in-out;
 }
