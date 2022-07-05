@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<title>文章評論測試-歡迎光臨！</title>
+<title>在 Mac 上使用 lima 作為 Linux 環境-歡迎光臨！</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,8 +12,8 @@
 
 
 
-<meta name="keywords" content="test,">
-<meta name="description" content="這次用英文檔名，中文標題試試">
+<meta name="keywords" content="lima,Mac,Linux,picoCTF,">
+<meta name="description" content="分享一下我安裝和使用 lima 的方式，以及我遇到的問題。">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -300,12 +300,18 @@
         <ul class="post-header-tag">
             
             
-            <li><a href="/tags/test">test</a></li>
+            <li><a href="/tags/lima">lima</a></li>
+            
+            <li><a href="/tags/Mac">Mac</a></li>
+            
+            <li><a href="/tags/Linux">Linux</a></li>
+            
+            <li><a href="/tags/picoCTF">picoCTF</a></li>
             
             
         </ul>
         
-        <h1>文章評論測試</h1>
+        <h1>在 Mac 上使用 lima 作為 Linux 環境</h1>
         <div class="post-header-info">
             <div class="post-header-info-author">
                 
@@ -320,22 +326,36 @@
                 <span class="post-header-info-author-text"> <a target="_blank" rel="noopener" href="https://github.com/yenslife">海狸大師</a></span>
                 <div class="post-header-info-author-categories">
                     
-                         <a href="../../../../categories/測試用/">測試用</a>
+                         <a href="../../../../categories/Linux/">Linux</a>
                     
                 </div>
-                <p>2022-07-03 18:42:02</p>
+                <p>2022-07-05 18:35:07</p>
             </div>
         </div>
     </div>
 </div>
     <div class="post-content" id="content">
   <div id="article" class="post-content-info">
-      <h1 id="Gitalk-評論測試文章"><a href="#Gitalk-評論測試文章" class="headerlink" title="Gitalk 評論測試文章"></a>Gitalk 評論測試文章</h1><p>今天發現如果文章標題用中文的話，因為中文編碼的關係，Github issue 的 label 長度很容易就超過 50 個字元，為了解決我找到了<a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk/issues/102">這篇關於 gitalk 的 issue</a>，經過<a target="_blank" rel="noopener" href="https://priesttomb.github.io/%E6%97%A5%E5%B8%B8/2018/02/12/%E5%A4%84%E7%90%86Gitalk%E4%B8%AD%E7%94%B1%E4%BA%8E%E6%96%87%E7%AB%A0URL%E8%BF%87%E9%95%BF%E5%AF%BC%E8%87%B4%E7%9A%84Validation-Failed(422)/">某位大佬的文章</a> 試著解決它QAQ，但即使我照著他們的方法做了依舊無法解決問題，於是我在想 <code>label</code> 是不是用文章的檔名來決定的，經過實驗發現真的是！所以改變一下思路，不要去糾結怎麼減少標籤的字元了，直接用英文命名就好啦，像這篇文章就是從<code>hexo new post test-comment</code>來的呢！。</p>
-<blockquote>
-<p>以後都使用 <code>hexo new post 英文檔名</code>，再改 title 就行了</p>
-</blockquote>
-<p><img src="https://i.imgur.com/PeV2ICZ.png" alt="改標題"><br><img src="https://i.imgur.com/GGealGn.png" alt="英文檔名"></p>
-<h1 id="結論："><a href="#結論：" class="headerlink" title="結論："></a>結論：</h1><p>山不轉，路轉。路不轉，人轉。當然這是最後手段啦，誰叫我對網頁還有 javascript 都不太熟QQ，花太多時間在 Google 反而讓自己需要填的”知識坑”越來越大，中途還意外讓自己的程式碼區塊跑掉，差點心態就沒了🤧。</p>
+      <h1 id="在-Mac-上使用-lima-作為-Linux-環境"><a href="#在-Mac-上使用-lima-作為-Linux-環境" class="headerlink" title="在 Mac 上使用 lima 作為 Linux 環境"></a>在 Mac 上使用 lima 作為 Linux 環境</h1><h3 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h3><ol>
+<li><a href="#%E5%AE%89%E8%A3%9D">安裝</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F">使用方式</a></li>
+<li><a href="#%E5%95%8F%E9%A1%8C%E4%B8%80%EF%BC%88%E7%84%A1%E6%B3%95%E8%AE%80%E5%AF%AB%E7%9A%84%E5%95%8F%E9%A1%8C%EF%BC%89">問題一（無法讀寫的問題）</a></li>
+</ol>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為最近想打看看 picoCTF，需要使用 Linux 環境。由於我使用的是 MacOS，他畢竟不是 Linux，雖然有些指令可以通用，但在程式執行結果上有很大的不同。於是我決定使用 lima 作為我的 Linux container，原本有想過要用 VMWare 虛擬機的方式，但是一想到每次我想打打 CTF 就要讓這台老 MacBook pro(late 2013)受苦就於心不忍。<br>事實也是如此，我一開 VMWare，老夥伴的風扇就又開始叫了🤧。</p>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>我是使用 <a target="_blank" rel="noopener" href="https://brew.sh/index_zh-tw">homebrew</a> 安裝的，請參考連結。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ brew install lima<br>$ limactl start <span class="hljs-comment"># 安裝虛擬機</span><br></code></pre></td></tr></table></figure>
+<p>當出現以下畫面，使用方向鍵上下來選擇配置，我們只要用預設的就行了，所以直接按 enter，看到READY就是完成了！</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">? Creating an instance <span class="hljs-string">&quot;default&quot;</span>  [Use arrows to move, <span class="hljs-built_in">type</span> to filter]<br>&gt; Proceed with the default configuration<br>  Open an editor to override the configuration<br>  Exit<br>...<br>INFO[0111] READY. Run `lima` to open the shell.<br></code></pre></td></tr></table></figure>
+<p>下載完成可以執行<code>lima uname -a</code>來確認虛擬機已經在執行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ Linux lima-default 5.15.0-39-generic <span class="hljs-comment">#42-Ubuntu SMP Thu Jun 9 23:42:32 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux</span><br></code></pre></td></tr></table></figure>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>直接在終端機輸入<code>lima</code>就可以執行了，若要離開就直接輸入<code>exit</code>。<br>(<del>剛裝好時我還不知道怎麼離開，所以都用兩個 terminal 視窗，一個是 lima 一個是 zsh，不要跟我一樣蠢喔qq</del>)<br><img src="https://i.imgur.com/4v2K8Fw.png" alt="示意圖"><br>至於容器的部分我還沒研究，這是 lima 的強項，它被號稱可以成為取代 docker 的 macOS Subsystem Linux。但畢竟我只是需要一個方便的 Linux 環境來練CTF(<del>感覺有點廢</del>)，有興趣的朋友請參考<a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">lima原始碼</a>。</p>
+<h2 id="問題一（無法讀寫的問題）"><a href="#問題一（無法讀寫的問題）" class="headerlink" title="問題一（無法讀寫的問題）"></a>問題一（無法讀寫的問題）</h2><p>如果你在 lima 想要用<code>mkdir</code>指令，或者用<code>vim</code>簡單改一下檔案，可能會出現這行。<br><code>lima mkdir cannot create directory Read-only file system</code><br>我在找資料時發現了<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/questions/10188327">這篇問答</a>，原本也以為是系統資料出問題，後來我找到這篇 <a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">lima 的 issue</a>，發現其實是 <a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">lima 設定檔</a>的問題。以下的指令在 zsh 或 bash 中都能使用，如果你在 lima shell 中使用會發現根本找不到這個檔案喔，總之就是開 mac terminal 就對了。</p>
+<ol>
+<li>修改設定檔<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ vim ~/.lima/default/lima.yaml <span class="hljs-comment"># 你可以在這邊找到設定檔</span><br><span class="hljs-comment"># 有點長我就不貼上來了，需要改的只有 writable: null 改成 writable: true</span><br>writable: null -&gt; writable: <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure></li>
+<li>重新跑 lima<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ limactl list <span class="hljs-comment"># 這個指令可以列出所有正在執行的虛擬機，我看到的是名為 default 的虛擬機</span><br>$ limactl stop default <span class="hljs-comment"># 將它停止運行，default 可以替換成你的虛擬機名稱</span><br>$ limactl start default <span class="hljs-comment"># 同上，default 可以替換成你的虛擬機名稱</span><br></code></pre></td></tr></table></figure></li>
+<li>恭喜你成功了！</li>
+</ol>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p><a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">lima原始碼</a><br><a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/blob/41fd9cc6a1e2bac73666e1f2b11604c7c42227dc/pkg/limayaml/default.TEMPLATE.yaml#L33-L41">參考資料(lima issue 34)</a><br><a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">參考資料(lima 設定檔)</a></p>
 
   </div>
   <div id="gitalk-container"></div>
@@ -395,19 +415,12 @@ Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
 
     <div class="post-paging">
     
-    <a href="/2022/07/05/use-lima-on-mac-as-linux-environment/">
-        <div class="post-paging-last">
-            <span>上一篇</span>
-            <p>在 Mac 上使用 lima 作為 Linux 環境</p>
-        </div>
-    </a>
-    
 
     
-    <a href="/2022/07/03/%E6%96%87%E7%AB%A0%E5%9C%96%E7%89%87%E6%B8%AC%E8%A9%A6/">
+    <a href="/2022/07/03/test-comment/">
         <div class="post-paging-next">
             <span>下一篇</span>
-            <p>文章圖片測試</p>
+            <p>文章評論測試</p>
         </div>
     </a>
     
