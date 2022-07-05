@@ -1,4 +1,13 @@
 Sitemap: https://yenslife.top/sitemap.xml
+Sitemap: https://yenslife.top/sitemap
+Sitemap: https://yenslife.github.io/sitemap.xml
+Sitemap: https://yenslife.github.io/sitemap
+Sitemap: http://yenslife.top/sitemap.xml
+Sitemap: http://yenslife.top/sitemap
+Sitemap: https://www.yenslife.top/sitemap.xml
+Sitemap: https://www.yenslife.top/sitemap
+Sitemap: http://www.yenslife.top/sitemap.xml
+Sitemap: http://www.yenslife.top/sitemap
 
 User-agent: *
 Disallow:
