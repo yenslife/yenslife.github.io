@@ -1,4 +1,4 @@
-Sitemap: http://yenslife.top/sitemap.xml
+Sitemap: https://yenslife.top/sitemap.xml
 
 User-agent: *
 Disallow:
