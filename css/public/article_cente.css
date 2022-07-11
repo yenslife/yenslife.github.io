@@ -90,12 +90,12 @@
 #article blockquote {
   background: #fafafa;
   border-left: 5px solid #e0e2e5;
-  color: #aaa;
+  color: #575757;
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 400;
   text-indent: 1em;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 10px;
 }
 #article p code,
