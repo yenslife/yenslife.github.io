@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<title>在 Mac 上使用 lima 作為 Linux 環境-歡迎光臨！</title>
+<title>UVa10190：Divide, But Not Quite Conquer!-歡迎光臨！</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,8 +12,8 @@
 
 
 
-<meta name="keywords" content="lima,Mac,Linux,picoCTF,">
-<meta name="description" content="分享一下我安裝和使用 lima 的方式，以及我遇到的問題。">
+<meta name="keywords" content="CPE,程式解題,UVa,">
+<meta name="description" content="UVa10190：Divide, But Not Quite Conquer! 解題心得與問題檢討">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -300,18 +300,16 @@
         <ul class="post-header-tag">
             
             
-            <li><a href="/tags/lima">lima</a></li>
+            <li><a href="/tags/CPE">CPE</a></li>
             
-            <li><a href="/tags/Mac">Mac</a></li>
+            <li><a href="/tags/程式解題">程式解題</a></li>
             
-            <li><a href="/tags/Linux">Linux</a></li>
-            
-            <li><a href="/tags/picoCTF">picoCTF</a></li>
+            <li><a href="/tags/UVa">UVa</a></li>
             
             
         </ul>
         
-        <h1>在 Mac 上使用 lima 作為 Linux 環境</h1>
+        <h1>UVa10190：Divide, But Not Quite Conquer!</h1>
         <div class="post-header-info">
             <div class="post-header-info-author">
                 
@@ -326,36 +324,39 @@
                 <span class="post-header-info-author-text"> <a target="_blank" rel="noopener" href="https://github.com/yenslife">海狸大師</a></span>
                 <div class="post-header-info-author-categories">
                     
-                         <a href="../../../../categories/Linux/">Linux</a>
+                         <a href="../../../../categories/程式解題/">程式解題</a>
                     
                 </div>
-                <p>2022-07-05 18:35:07</p>
+                <p>2022-07-11 19:27:36</p>
             </div>
         </div>
     </div>
 </div>
     <div class="post-content" id="content">
   <div id="article" class="post-content-info">
-      <h1 id="在-Mac-上使用-lima-作為-Linux-環境"><a href="#在-Mac-上使用-lima-作為-Linux-環境" class="headerlink" title="在 Mac 上使用 lima 作為 Linux 環境"></a>在 Mac 上使用 lima 作為 Linux 環境</h1><h3 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h3><ol>
-<li><a href="#%E5%AE%89%E8%A3%9D">安裝</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F">使用方式</a></li>
-<li><a href="#%E5%95%8F%E9%A1%8C%E4%B8%80%EF%BC%88%E7%84%A1%E6%B3%95%E8%AE%80%E5%AF%AB%E7%9A%84%E5%95%8F%E9%A1%8C%EF%BC%89">問題一（無法讀寫的問題）</a></li>
-</ol>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為最近想打看看 picoCTF，需要使用 Linux 環境。由於我使用的是 MacOS，他畢竟不是 Linux，雖然有些指令可以通用，但在程式執行結果上有很大的不同。於是我決定使用 lima 作為我的 Linux container，原本有想過要用 VMWare 虛擬機的方式，但是一想到每次我想打打 CTF 就要讓這台老 MacBook pro(late 2013)受苦就於心不忍。<br>事實也是如此，我一開 VMWare，老夥伴的風扇就又開始叫了🤧。</p>
-<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>我是使用 <a target="_blank" rel="noopener" href="https://brew.sh/index_zh-tw">homebrew</a> 安裝的，記得到<a target="_blank" rel="noopener" href="https://brew.sh/index_zh-tw">官方網站</a>下載喔。先輸入以下指令。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ brew install lima <span class="hljs-comment"># 安裝 lima</span><br>$ limactl start <span class="hljs-comment"># 安裝虛擬機</span><br></code></pre></td></tr></table></figure>
-<p>當出現以下畫面，使用方向鍵上下來選擇配置，我們只要用預設的就行了，所以直接按 enter，看到READY就是完成了！</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">? Creating an instance <span class="hljs-string">&quot;default&quot;</span>  [Use arrows to move, <span class="hljs-built_in">type</span> to filter]<br>&gt; Proceed with the default configuration<br>  Open an editor to override the configuration<br>  Exit<br>...<br>INFO[0111] READY. Run `lima` to open the shell.<br></code></pre></td></tr></table></figure>
-<p>下載完成可以執行<code>lima uname -a</code>來確認虛擬機已經在執行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ Linux lima-default 5.15.0-39-generic <span class="hljs-comment">#42-Ubuntu SMP Thu Jun 9 23:42:32 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux</span><br></code></pre></td></tr></table></figure>
-<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>直接在終端機輸入<code>lima</code>就可以執行了，若要離開就直接輸入<code>exit</code>。<br>(<del>剛裝好時我還不知道怎麼離開，所以都用兩個 terminal 視窗，一個是 lima 一個是 zsh，不要跟我一樣蠢喔qq</del>)<br><img src="https://i.imgur.com/4v2K8Fw.png" alt="示意圖"><br>至於容器的部分我還沒研究，這是 lima 的強項，它被號稱可以成為取代 docker 的 macOS Subsystem Linux。但畢竟我只是需要一個方便的 Linux 環境來練CTF(<del>感覺有點廢</del>)，有興趣的朋友請參考<a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">lima原始碼</a>。</p>
-<h2 id="問題一（無法讀寫的問題）"><a href="#問題一（無法讀寫的問題）" class="headerlink" title="問題一（無法讀寫的問題）"></a>問題一（無法讀寫的問題）</h2><p>如果你在 lima 想要用<code>mkdir</code>指令，或者用<code>vim</code>簡單改一下檔案，可能會出現這行。<br><code>lima mkdir cannot create directory Read-only file system</code><br>我在找資料時發現了<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/questions/10188327">這篇問答</a>，原本也以為是系統資料出問題，但我的情況好像和他不太一項。後來我找到這篇 <a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">lima 的  Github issue</a>，發現其實是 <a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">lima 設定檔</a>的問題。以下的指令在 zsh 或 bash 中都能使用，如果你在 lima shell 中使用會發現找不到這個檔案喔。總之就是開 mac 原本的 terminal 就對了。解決方式如下。</p>
+      <h1 id="UVa10190：Divide-But-Not-Quite-Conquer"><a href="#UVa10190：Divide-But-Not-Quite-Conquer" class="headerlink" title="UVa10190：Divide, But Not Quite Conquer!"></a>UVa10190：Divide, But Not Quite Conquer!</h1><p>這是我在練習 CPE 歷屆題目時，順手寫下的解題心得，提醒自己不再重蹈覆徹。</p>
+<p>題目連結：<a target="_blank" rel="noopener" href="https://onlinejudge.org/external/101/10190.pdf">10190.pdf (onlinejudge.org)</a></p>
+<p>這題我主要採了兩個坑：</p>
 <ol>
-<li>修改設定檔<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ vim ~/.lima/default/lima.yaml <span class="hljs-comment"># 先用 vim 編輯設定檔。</span><br><span class="hljs-comment"># 有點長我就不貼上來了，找到 writable: null 並改成 writable: true</span><br>writable: null -&gt; writable: <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure></li>
-<li>重新跑 lima<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ limactl list <span class="hljs-comment"># 這個指令可以列出所有正在執行的虛擬機，我看到的是名為 default 的虛擬機</span><br>$ limactl stop default <span class="hljs-comment"># 將它停止運行，default 可以替換成你的虛擬機名稱</span><br>$ limactl start default <span class="hljs-comment"># 同上，default 可以替換成你的虛擬機名稱</span><br></code></pre></td></tr></table></figure></li>
-<li>恭喜你成功了！</li>
+<li><a href="#%E5%95%8F%E9%A1%8C%E6%AA%A2%E8%A8%8E%EF%BC%88%E8%B8%A9%E5%88%B0pow%E7%9A%84%E5%9D%91%E4%BA%86%EF%BC%89">搞不清楚<code>pow()</code> 方法的實作細節，導致在強制轉型時數值有誤差。</a></li>
+<li><a href="#%E5%95%8F%E9%A1%8C%E6%AA%A2%E8%A8%8E%EF%BC%88%E4%B8%8D%E5%A4%A0%E7%B4%B0%E5%BF%83%EF%BC%89">沒有考慮到分母為0和1的情況。</a></li>
 </ol>
-<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p><a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">lima原始碼</a><br><a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/blob/41fd9cc6a1e2bac73666e1f2b11604c7c42227dc/pkg/limayaml/default.TEMPLATE.yaml#L33-L41">參考資料(lima issue 34)</a><br><a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">參考資料(lima 設定檔)</a></p>
+<p>以下是我的程式碼：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">define</span> true 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> false 0</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> bool int</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;math.h&gt;</span></span><br></code></pre></td></tr></table></figure>
+<p>(分兩塊是因為我的網頁 c 語言程式碼 highlight 怪怪的，不這樣做顯示不出來 QQ)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">division</span><span class="hljs-params">(<span class="hljs-type">long</span> a, <span class="hljs-type">long</span> b)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (b == <span class="hljs-number">0</span> || b == <span class="hljs-number">1</span> || a % b != <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    <span class="hljs-keyword">if</span> (a / b == <span class="hljs-number">1</span> &amp;&amp; a % b == <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">division</span>(a/b, b);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span> </span>&#123;<br><br>    <span class="hljs-type">long</span> a = <span class="hljs-number">0</span>, b = <span class="hljs-number">0</span>, power = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%ld %ld&quot;</span>, &amp;a, &amp;b) != EOF) &#123;<br>        <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">division</span>(a, b)) &#123;<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Boring!\n&quot;</span>);<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-built_in">division</span>(a,b))&#123;<br>            power = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; a; i++) &#123;<br>                <span class="hljs-keyword">if</span> ((<span class="hljs-type">long</span>)<span class="hljs-built_in">round</span>(<span class="hljs-built_in">pow</span>((<span class="hljs-type">double</span>)b, (<span class="hljs-type">double</span>)i)) == a) &#123;<br>                    power = i;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = power; i &gt; <span class="hljs-number">0</span>; i--) &#123;<br>                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d &quot;</span>, (<span class="hljs-type">int</span>)<span class="hljs-built_in">round</span>(<span class="hljs-built_in">pow</span>(b, i)));<br>            &#125;<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;1\n&quot;</span>);<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>我的思路是，先用遞迴函式(因為感覺很帥，還有不知道為什麼在前面用<code>#define</code>很厲害的感覺XD，但其實效能很慘，這題一顆星而已所以影響不大)判斷分子是否為分母的次方數，若為否則可直接印出boring!；若為是，則先用迴圈計算指數大小，就可以將答案印出來。</p>
+<h2 id="問題檢討（踩到pow的坑了）"><a href="#問題檢討（踩到pow的坑了）" class="headerlink" title="問題檢討（踩到pow的坑了）"></a>問題檢討（踩到pow的坑了）</h2><p>參考網站 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41115379/article/details/105159542">C&#x2F;C++ pow()函数结果强制类型转换为整型的误差分析_关切得大神的博客-CSDN博客</a></p>
+<p>觀察以下函數 你覺得執行結果是什麼呢</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, (<span class="hljs-type">int</span>)<span class="hljs-built_in">pow</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>))<br></code></pre></td></tr></table></figure>
+
+<p>答案是：99。奇怪，結果不應該是100嗎？原因其實很簡單，<code>double pow(double x, double y)</code> 回傳值是以數值逼近的方法來的到double的數值的。舉例來說：99.9999最後會變成99。</p>
+<p>這邊<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41115379">关切得大神</a>給了個相當不錯的方法，對<code>pow()</code> 的回傳值做一次四捨五入<code>round()</code> 就行了，因為我們知道，<code>pow()</code> 的回傳值已經很接近數學計算的答案了。請參考下方程式碼。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, (<span class="hljs-type">int</span>)<span class="hljs-built_in">round</span>(<span class="hljs-built_in">pow</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>)))<br></code></pre></td></tr></table></figure>
+
+<p>因為真的太久沒寫，又覺得自己應該都是對的，導致我差點以為是編譯器的問題(這哪來的自信)。神奇的是，原本的程式碼(還沒四捨五入)的執行結果在 online compiler 以及 mac 環境的 vs code 中都可以正常運作，但在瘋狂程設卻會遇到數值誤差。這個故事告訴我，幸好有裝瘋狂程設來試，如果我一樣在 Mac 練習可能永遠無法發現這個錯誤，到時候考 CPE 遇到這問題就爆炸ㄌ。順帶一提，我是用虛擬機跑 Windows 的，<del>有機會再分享免費使用的方法 沒</del>。</p>
+<h2 id="問題檢討（不夠細心）"><a href="#問題檢討（不夠細心）" class="headerlink" title="問題檢討（不夠細心）"></a>問題檢討（不夠細心）</h2><p>再來就是沒有考慮到的測資了，可能是太就沒有解程式題目了，居然忘記要把分母為0和1的情況考慮進去。這題的情況是，若分母為0或1，也就是沒有結果，那就要印出boring!，如果沒有做條件判斷將會得到浮點數例外，要小心喔。</p>
 
   </div>
   <div id="gitalk-container"></div>
@@ -415,19 +416,12 @@ Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
 
     <div class="post-paging">
     
-    <a href="/2022/07/11/UVa10190/">
-        <div class="post-paging-last">
-            <span>上一篇</span>
-            <p>UVa10190：Divide, But Not Quite Conquer!</p>
-        </div>
-    </a>
-    
 
     
-    <a href="/2022/07/03/test-comment/">
+    <a href="/2022/07/05/use-lima-on-mac-as-linux-environment/">
         <div class="post-paging-next">
             <span>下一篇</span>
-            <p>文章評論測試</p>
+            <p>在 Mac 上使用 lima 作為 Linux 環境</p>
         </div>
     </a>
     
