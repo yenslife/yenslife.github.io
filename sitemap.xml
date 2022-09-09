@@ -119,6 +119,20 @@
 
   
   <url>
+    <loc>https://yenslife.top/tags/%E6%B8%AC%E8%A9%A6%E7%94%A8/</loc>
+    <lastmod>2022-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yenslife.top/tags/hexo%E8%AE%9A/</loc>
+    <lastmod>2022-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://yenslife.top/tags/CPE/</loc>
     <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -134,20 +148,6 @@
   
   <url>
     <loc>https://yenslife.top/tags/UVa/</loc>
-    <lastmod>2022-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://yenslife.top/tags/%E6%B8%AC%E8%A9%A6%E7%94%A8/</loc>
-    <lastmod>2022-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://yenslife.top/tags/hexo%E8%AE%9A/</loc>
     <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -212,14 +212,14 @@
 
   
   <url>
-    <loc>https://yenslife.top/categories/%E7%A8%8B%E5%BC%8F%E8%A7%A3%E9%A1%8C/</loc>
+    <loc>https://yenslife.top/categories/%E6%B8%AC%E8%A9%A6%E7%94%A8/</loc>
     <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://yenslife.top/categories/%E6%B8%AC%E8%A9%A6%E7%94%A8/</loc>
+    <loc>https://yenslife.top/categories/%E7%A8%8B%E5%BC%8F%E8%A7%A3%E9%A1%8C/</loc>
     <lastmod>2022-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
