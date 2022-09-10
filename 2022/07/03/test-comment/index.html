@@ -330,6 +330,7 @@
 </div>
     <div class="post-content" id="content">
   <div id="article" class="post-content-info">
+    
       <h1 id="Gitalk-評論測試文章"><a href="#Gitalk-評論測試文章" class="headerlink" title="Gitalk 評論測試文章"></a>Gitalk 評論測試文章</h1><p>今天發現如果文章標題用中文的話，因為中文編碼的關係，Github issue 的 label 長度很容易就超過 50 個字元，為了解決我找到了<a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk/issues/102">這篇關於 gitalk 的 issue</a>，經過<a target="_blank" rel="noopener" href="https://priesttomb.github.io/%E6%97%A5%E5%B8%B8/2018/02/12/%E5%A4%84%E7%90%86Gitalk%E4%B8%AD%E7%94%B1%E4%BA%8E%E6%96%87%E7%AB%A0URL%E8%BF%87%E9%95%BF%E5%AF%BC%E8%87%B4%E7%9A%84Validation-Failed(422)/">某位大佬的文章</a> 試著解決它QAQ，但即使我照著他們的方法做了依舊無法解決問題，於是我在想 <code>label</code> 是不是用文章的檔名來決定的，經過實驗發現真的是！所以改變一下思路，不要去糾結怎麼減少標籤的字元了，直接用英文命名就好啦，像這篇文章就是從<code>hexo new post test-comment</code>來的呢！。</p>
 <blockquote>
 <p>以後都使用 <code>hexo new post 英文檔名</code>，再改 title 就行了</p>

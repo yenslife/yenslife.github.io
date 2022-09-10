@@ -332,27 +332,82 @@
 </div>
     <div class="post-content" id="content">
   <div id="article" class="post-content-info">
-      <p>嗨嗨，這個是 hexo 預設的第一篇文章啦，基本上就是些使用教學，不過我也不打算刪掉他啦，留著做紀念也不錯。<del>才不是因為我現在文章太少了</del></p>
+    
+      <div id="post-toc">
+        <span class="post-toc-title">     文章目錄</span>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+      </div>
+    
+      <p>[TOC]</p>
+<p>嗨嗨，這個是 hexo 預設的第一篇文章啦，基本上就是些使用教學，不過我也不打算刪掉他啦，留著做紀念也不錯。<del>才不是因為我現在文章太少了</del></p>
 <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br>$ xxx<br></code></pre></td></tr></table></figure>
-
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+$ xxx
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123; <br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;hello world&quot;</span>); <span class="hljs-comment">/*c 語言怎麼好像會顯示失敗嗚嗚*/</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123; <br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;hello world&quot;</span>); <span class="hljs-comment">/*c 語言怎麼好像會顯示失敗嗚嗚*/</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><code class="hljs kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span></span> &#123;<br>  println(<span class="hljs-string">&quot;hello&quot;</span>) <span class="hljs-comment">/* Kotlin */</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
+<pre><code class="c">#include&lt;stdio.h&gt;
+int main() &#123; 
+    printf(&quot;hello world&quot;); /*c 語言怎麼好像會顯示失敗嗚嗚*/
+    return 0;
+&#125;
+</code></pre>
+<pre><code class="c">int main() &#123; 
+    printf(&quot;hello world&quot;); /*c 語言怎麼好像會顯示失敗嗚嗚*/
+    return 0;
+&#125;
+</code></pre>
+<pre><code class="kotlin">fun main () &#123;
+  println(&quot;hello&quot;) /* Kotlin */
+&#125;
+</code></pre>
 <p>嗨嗨<code>test</code></p>
+<pre><code class="cpp">#define true 1
+#define false 0
+#define bool int
+
+#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+
+    bool division(long a, long b) &#123;
+        if (b == 0 || b == 1 || a % b != 0) return false;
+        if (a / b == 1 &amp;&amp; a % b == 0) &#123;
+            return true;
+        &#125;
+        return division(a/b, b);
+    &#125;
+
+    int main () &#123;
+
+        long a = 0, b = 0, power = 0;
+        while(scanf(&quot;%ld %ld&quot;, &amp;a, &amp;b) != EOF) &#123;
+            if (!division(a, b)) &#123;
+                printf(&quot;Boring!\n&quot;);
+            &#125; else if (division(a,b))&#123;
+                power = 0;
+                for (int i = 0; i &lt; a; i++) &#123;
+                    if ((long)round(pow((double)b, (double)i)) == a) &#123;
+                        power = i;
+                        break;
+                    &#125;
+                &#125;
+                for (int i = power; i &gt; 0; i--) &#123;
+                    printf(&quot;%d &quot;, (int)round(pow(b, i)));
+                &#125;
+                printf(&quot;1\n&quot;);
+            &#125;
+        &#125;
+        return 0;
+    &#125;
+</code></pre>
 
   </div>
   <div id=""></div>

@@ -12,7 +12,7 @@
 
 
 
-<meta name="keywords" content="Lima,Mac,Linux,picoCTF,">
+<meta name="keywords" content="Mac,Lima,Linux,picoCTF,">
 <meta name="description" content="分享一下我安裝和使用 lima 的方式，以及我遇到的問題。">
 
 
@@ -300,9 +300,9 @@
         <ul class="post-header-tag">
             
             
-            <li><a href="/tags/Lima">Lima</a></li>
-            
             <li><a href="/tags/Mac">Mac</a></li>
+            
+            <li><a href="/tags/Lima">Lima</a></li>
             
             <li><a href="/tags/Linux">Linux</a></li>
             
@@ -336,6 +336,7 @@
 </div>
     <div class="post-content" id="content">
   <div id="article" class="post-content-info">
+    
       <h1 id="在-Mac-上使用-lima-作為-Linux-環境"><a href="#在-Mac-上使用-lima-作為-Linux-環境" class="headerlink" title="在 Mac 上使用 lima 作為 Linux 環境"></a>在 Mac 上使用 lima 作為 Linux 環境</h1><h3 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h3><ol>
 <li><a href="#%E5%AE%89%E8%A3%9D">安裝</a></li>
 <li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F">使用方式</a></li>
@@ -343,18 +344,39 @@
 </ol>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為最近想打看看 picoCTF，需要使用 Linux 環境。由於我使用的是 MacOS，他畢竟不是 Linux，雖然有些指令可以通用，但在程式執行結果上有很大的不同。於是我決定使用 lima 作為我的 Linux container，原本有想過要用 VMWare 虛擬機的方式，但是一想到每次我想打打 CTF 就要讓這台老 MacBook pro(late 2013)受苦就於心不忍。<br>事實也是如此，我一開 VMWare，老夥伴的風扇就又開始叫了🤧。</p>
 <h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>我是使用 <a target="_blank" rel="noopener" href="https://brew.sh/index_zh-tw">homebrew</a> 安裝的，記得到<a target="_blank" rel="noopener" href="https://brew.sh/index_zh-tw">官方網站</a>下載喔。先輸入以下指令。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ brew install lima <span class="hljs-comment"># 安裝 lima</span><br>$ limactl start <span class="hljs-comment"># 安裝虛擬機</span><br></code></pre></td></tr></table></figure>
+<pre><code class="bash=">$ brew install lima # 安裝 lima
+$ limactl start # 安裝虛擬機
+</code></pre>
 <p>當出現以下畫面，使用方向鍵上下來選擇配置，我們只要用預設的就行了，所以直接按 enter，看到READY就是完成了！</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">? Creating an instance <span class="hljs-string">&quot;default&quot;</span>  [Use arrows to move, <span class="hljs-built_in">type</span> to filter]<br>&gt; Proceed with the default configuration<br>  Open an editor to override the configuration<br>  Exit<br>...<br>INFO[0111] READY. Run `lima` to open the shell.<br></code></pre></td></tr></table></figure>
+<pre><code class="bash=">? Creating an instance &quot;default&quot;  [Use arrows to move, type to filter]
+&gt; Proceed with the default configuration
+  Open an editor to override the configuration
+  Exit
+...
+INFO[0111] READY. Run `lima` to open the shell.
+</code></pre>
 <p>下載完成可以執行<code>lima uname -a</code>來確認虛擬機已經在執行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ Linux lima-default 5.15.0-39-generic <span class="hljs-comment">#42-Ubuntu SMP Thu Jun 9 23:42:32 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux</span><br></code></pre></td></tr></table></figure>
+<pre><code class="bash=">$ Linux lima-default 5.15.0-39-generic #42-Ubuntu SMP Thu Jun 9 23:42:32 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+</code></pre>
 <h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>直接在終端機輸入<code>lima</code>就可以執行了，若要離開就直接輸入<code>exit</code>。<br>(<del>剛裝好時我還不知道怎麼離開，所以都用兩個 terminal 視窗，一個是 lima 一個是 zsh，不要跟我一樣蠢喔qq</del>)<br>如果沒有要使用虛擬機也記得關掉它，不然他會默默吃掉你的記憶體，輸入<code>lima stop [虛擬機名稱]</code> 來關閉虛擬機。</p>
 <p><img src="https://i.imgur.com/4v2K8Fw.png" alt="示意圖"></p>
 <p>至於容器的部分我還沒研究，這是 lima 的強項，它被號稱可以成為取代 docker 的 macOS Subsystem Linux。但畢竟我只是需要一個方便的 Linux 環境來練CTF(<del>感覺有點廢</del>)，有興趣的朋友請參考<a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">lima原始碼</a>。</p>
 <h2 id="問題一（無法讀寫的問題）"><a href="#問題一（無法讀寫的問題）" class="headerlink" title="問題一（無法讀寫的問題）"></a>問題一（無法讀寫的問題）</h2><p>如果你在 lima 想要用<code>mkdir</code>指令，或者用<code>vim</code>簡單改一下檔案，可能會出現這行。<br><code>lima mkdir cannot create directory Read-only file system</code><br>我在找資料時發現了<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/questions/10188327">這篇問答</a>，原本也以為是系統資料出問題，但我的情況好像和他不太一項。後來我找到這篇 <a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">lima 的  Github issue</a>，發現其實是 <a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">lima 設定檔</a>的問題。以下的指令在 zsh 或 bash 中都能使用，如果你在 lima shell 中使用會發現找不到這個檔案喔。總之就是開 mac 原本的 terminal 就對了。解決方式如下。</p>
 <ol>
-<li>修改設定檔<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ vim ~/.lima/default/lima.yaml <span class="hljs-comment"># 先用 vim 編輯設定檔。</span><br><span class="hljs-comment"># 有點長我就不貼上來了，找到 writable: null 並改成 writable: true</span><br>writable: null -&gt; writable: <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure></li>
-<li>重新跑 lima<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ limactl list  這個指令可以列出所有正在執行的虛擬機，我看到的是名為 default 的虛擬機<br>$ limactl stop default  將它停止運行，default 可以替換成你的虛擬機名稱<br>$ limactl start default  同上，default 可以替換成你的虛擬機名稱<br></code></pre></td></tr></table></figure></li>
+<li>修改設定檔</li>
+</ol>
+<pre><code class="bash=">$ vim ~/.lima/default/lima.yaml # 先用 vim 編輯設定檔。
+# 有點長我就不貼上來了，找到 writable: null 並改成 writable: true
+writable: null -&gt; writable: true
+</code></pre>
+<ol start="2">
+<li>重新跑 lima</li>
+</ol>
+<pre><code class="bash=">$ limactl list  這個指令可以列出所有正在執行的虛擬機，我看到的是名為 default 的虛擬機
+$ limactl stop default  將它停止運行，default 可以替換成你的虛擬機名稱
+$ limactl start default  同上，default 可以替換成你的虛擬機名稱
+</code></pre>
+<ol start="3">
 <li>恭喜你成功了！</li>
 </ol>
 <h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p><a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">lima原始碼</a><br><a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/blob/41fd9cc6a1e2bac73666e1f2b11604c7c42227dc/pkg/limayaml/default.TEMPLATE.yaml#L33-L41">參考資料(lima issue 34)</a><br><a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">參考資料(lima 設定檔)</a></p>

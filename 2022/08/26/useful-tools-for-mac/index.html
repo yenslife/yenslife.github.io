@@ -334,6 +334,7 @@
 </div>
     <div class="post-content" id="content">
   <div id="article" class="post-content-info">
+    
       <h6 id="tags-部落格文章-Mac-工具分享"><a href="#tags-部落格文章-Mac-工具分享" class="headerlink" title="tags: 部落格文章 Mac 工具分享"></a>tags: <code>部落格文章</code> <code>Mac</code> <code>工具分享</code></h6><h1 id="Mac-實用小工具（不定期更新！）"><a href="#Mac-實用小工具（不定期更新！）" class="headerlink" title="Mac 實用小工具（不定期更新！）"></a>Mac 實用小工具（不定期更新！）</h1><p>身為一個 Mac 筆電使用者，今天想跟大家分享我常用的小工具或軟體，不論在寫程式或者日常使用都很常用到的工具，只要有「如果當初有人告訴我去使用這個工具那該有多好」的感覺就會出現在目錄。順便提醒之後要換筆電的自己要裝什麼（雖然我應該沒錢換🤧）。有興趣可以裝來玩玩看，有些工具能節省你非常多時間！這篇文章不會太過著墨在操作方法以及安裝，主要是在分享。以下是目錄。</p>
 <p>(為體驗最佳閱讀體驗，建議將 AdBlock 關閉，有些圖片可能會被擋掉)</p>
 <h2 id="桌面與系統相關（日常生活）"><a href="#桌面與系統相關（日常生活）" class="headerlink" title="桌面與系統相關（日常生活）"></a>桌面與系統相關（日常生活）</h2><ul>
@@ -449,11 +450,21 @@
 <li>打開終端機 (terminal)。</li>
 <li>在終端機輸入以下指令，然後按 Enter。</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
-
+<pre><code class="bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
 <p>分享一些 Homebrew 基本指令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">brew install [套件名稱] // 安裝套件<br><br>brew uninstall [套件名稱] // 解除安裝<br><br>brew update // 更新 brew 到最新版本<br><br>brew upgrate [套件名稱] // 更新指定套件<br><br>brew list // 查看現有的套件以及 Cask<br><br>brew search [關鍵字] // 查詢套件<br></code></pre></td></tr></table></figure>
+<pre><code class="bash">brew install [套件名稱] // 安裝套件
 
+brew uninstall [套件名稱] // 解除安裝
+
+brew update // 更新 brew 到最新版本
+
+brew upgrate [套件名稱] // 更新指定套件
+
+brew list // 查看現有的套件以及 Cask
+
+brew search [關鍵字] // 查詢套件
+</code></pre>
 <ul>
 <li>Homebrew Cask 是安裝 GUI 軟體在用的，使用方法同上，只是要在 brew 之後加上 <code>--cask</code></li>
 </ul>

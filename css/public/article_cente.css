@@ -1,3 +1,15 @@
+#article h1,
+#article h2,
+#article h3,
+#article h4,
+#article h5,
+#article h6 {
+  position: relative;
+  font-weight: 600;
+  outline: none;
+  color: #12183A;
+  cursor: pointer;
+}
 #article h1 {
   font-size: 32px;
   font-weight: 900;
@@ -53,9 +65,32 @@
 #article pre {
   font-size: 0.85em;
   line-height: 1.5em;
+  display: flex;
+  max-width: 1000px;
+  position: relative;
+}
+#article pre:after {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fc625d;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  content: ' ';
 }
 #article pre code {
-  padding: 20px;
+  flex: 1;
+  text-align: left;
+  width: fit-content;
+  padding: 40px 20px 20px 20px;
+  margin: 20px 0;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
 }
 #article p {
   margin-top: 15px;
@@ -106,6 +141,9 @@
   font-size: 1em;
   margin: 0 3px;
   padding: 0 10px;
+}
+#article p strong {
+  font-weight: bold;
 }
 #article table {
   width: 100%;
