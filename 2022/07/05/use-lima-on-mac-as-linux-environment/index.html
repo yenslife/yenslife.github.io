@@ -360,7 +360,7 @@ INFO[0111] READY. Run `lima` to open the shell.
 </code></pre>
 <h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>直接在終端機輸入<code>lima</code>就可以執行了，若要離開就直接輸入<code>exit</code>。<br>(<del>剛裝好時我還不知道怎麼離開，所以都用兩個 terminal 視窗，一個是 lima 一個是 zsh，不要跟我一樣蠢喔qq</del>)<br>如果沒有要使用虛擬機也記得關掉它，不然他會默默吃掉你的記憶體，輸入<code>lima stop [虛擬機名稱]</code> 來關閉虛擬機。</p>
 <p><img src="https://i.imgur.com/4v2K8Fw.png" alt="示意圖"></p>
-<p>至於容器的部分我還沒研究，這是 lima 的強項，它被號稱可以成為取代 docker 的 macOS Subsystem Linux。但畢竟我只是需要一個方便的 Linux 環境來練CTF(<del>感覺有點廢</del>)，有興趣的朋友請參考<a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">lima原始碼</a>。</p>
+<p>至於容器的部分我還沒研究，這是 lima 的強項，它被號稱可以成為取代 docker 的 macOS Subsystem Linux。但畢竟我只是需要一個方便的 Linux 環境來練CTF，有興趣的朋友請參考<a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">lima原始碼</a>。</p>
 <h2 id="問題一（無法讀寫的問題）"><a href="#問題一（無法讀寫的問題）" class="headerlink" title="問題一（無法讀寫的問題）"></a>問題一（無法讀寫的問題）</h2><p>如果你在 lima 想要用<code>mkdir</code>指令，或者用<code>vim</code>簡單改一下檔案，可能會出現這行。<br><code>lima mkdir cannot create directory Read-only file system</code><br>我在找資料時發現了<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/questions/10188327">這篇問答</a>，原本也以為是系統資料出問題，但我的情況好像和他不太一項。後來我找到這篇 <a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">lima 的  Github issue</a>，發現其實是 <a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima/issues/34">lima 設定檔</a>的問題。以下的指令在 zsh 或 bash 中都能使用，如果你在 lima shell 中使用會發現找不到這個檔案喔。總之就是開 mac 原本的 terminal 就對了。解決方式如下。</p>
 <ol>
 <li>修改設定檔</li>
