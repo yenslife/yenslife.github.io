@@ -346,7 +346,7 @@
 <ol>
 <li>安裝連線工具</li>
 </ol>
-<pre><code>sudo apt install openssh-server
+<pre><code class="bash">sudo apt install openssh-server
 </code></pre>
 <ol start="2">
 <li>在 Ubuntu 上啟動 ssh</li>
@@ -358,7 +358,7 @@
 sudo systemctl stop ssh # 停止 ssh
 sudo systemctl status ssh # 查看目前 ssh 狀態
 </code></pre>
-<p>最後開啟 mac 的終端機，輸入 <code>ssh 你在Ubuntu的username@你的ip</code> ，不知道 IP 可以輸入 <code>hostname -I</code> 查看</p>
+<p>最後開啟 mac 的終端機，輸入 <code>ssh 你在Ubuntu的username@你的ip</code> ，不知道 IP 可以輸入 <code>hostname -I</code> 查看(對外 ip 可以用 <code>curl ipinfo.io</code>)</p>
 <h1 id="一些可能會有的問題"><a href="#一些可能會有的問題" class="headerlink" title="一些可能會有的問題"></a>一些可能會有的問題</h1><h2 id="如果在-Mac-那邊連線時出現類似以下的訊息"><a href="#如果在-Mac-那邊連線時出現類似以下的訊息" class="headerlink" title="如果在 Mac 那邊連線時出現類似以下的訊息"></a>如果在 Mac 那邊連線時出現類似以下的訊息</h2><pre><code class="text">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
