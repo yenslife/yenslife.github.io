@@ -96,10 +96,11 @@
 }
 #article p {
   margin-top: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   line-height: 1.5em;
-  font-size: 1em;
+  font-size: 0.95em;
   letter-spacing: 0.7px;
+  color: #363636;
 }
 #article ol {
   padding: 10px 30px;
