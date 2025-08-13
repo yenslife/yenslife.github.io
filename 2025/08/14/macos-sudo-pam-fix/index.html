@@ -37,8 +37,7 @@
 <meta name="google-site-verification" content="a_TQPwe8festWSXbDKfrpGIyv-Rm3LmV06g-8eysCOI" />
 <meta name="google-adsense-account" content="ca-pub-3446744309465814">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3446744309465814" crossorigin="anonymous"></script>
-	<meta name="generator" content="Hexo 6.2.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+	<meta name="generator" content="Hexo 6.2.0"></head>
 
 	<body>
 		
@@ -342,8 +341,8 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qOrlYzqXPa8?si=JKLwHGNJ3bNuOuvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <p>他說可以透過修改 <code>/etc/pam.d/sudo</code>，加入 <code>auth sufficent pam_tid.so</code> 來讓之後需要輸入 sudo 的地方都可以使用指紋來驗證，超帥超快的，特別是如果你的密碼很長，應該會輸入到很躁</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cat</span> /etc/pam.d/sudo
-<span class="token comment" spellcheck="true"># sudo: auth account password session</span>
+<pre><code class="bash">cat /etc/pam.d/sudo
+# sudo: auth account password session
 auth sufficient     pam_tid.so
 auth       include        sudo_local
 auth       sufficient     pam_smartcard.so
@@ -351,7 +350,7 @@ auth       required       pam_opendirectory.so
 account    required       pam_permit.so
 password   required       pam_deny.so
 session    required       pam_permit.so
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>但好笑的是，我不小心把 <code>pam_tid.so</code> 寫成 <code>pam_unix.so</code> (有時候用 GitHub copilot 還是要注意呀QQ)</p>
 <p>導致我存檔離開並打算用 <code>sudo</code> 的時候，出現 <code>sudo: unable to initialize PAM: No such file or directory</code>，意思就是 pam 設定檔錯誤，然後想要改這個檔案又需要 sudo 的權限，所以哈哈，尷尬了，悲劇了，完蛋了</p>
 <h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>跟 Perplextiy 聊過之後，才知道這種系統層級的東西壞掉，在 MacOS 上可以透過「恢復模式」來修，在這個模式下的終端機預設就是 super user，所以只要用這個模式把 <code>/etc/pam.d/sudo</code> 改好就好了！</p>
@@ -363,8 +362,8 @@ session    required       pam_permit.so
 </ol>
 <p>Perplexity 跟我說可以用「磁碟工具程式」來選取掛載 <code>/etc</code> 的磁碟，然後進入終端機用 vi 去改。我後來發現其實不用這樣，這一步應該只是要確定這個 Volume 的名字而已，我最後是用以下命令來改</p>
 <p>至於進入終端機的方式，你可以看到螢幕最上方繪有一條 menu bar，那邊有一個地方可以開啟終端機</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">vi</span> /Volumes/Macintosh\ HD/etc/pam.d/sudo
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="bash">$ vi /Volumes/Macintosh\ HD/etc/pam.d/sudo
+</code></pre>
 <p>改好存檔之後，重新開機就可以用指紋來驗證 sudo 啦！！超酷的</p>
 <p><img src="https://i.meee.com.tw/CzGJ70z.png" alt="系統要求使用指紋來驗證 sudo 的截圖"></p>
 
