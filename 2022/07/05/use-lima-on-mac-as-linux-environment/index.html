@@ -37,7 +37,8 @@
 <meta name="google-site-verification" content="a_TQPwe8festWSXbDKfrpGIyv-Rm3LmV06g-8eysCOI" />
 <meta name="google-adsense-account" content="ca-pub-3446744309465814">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3446744309465814" crossorigin="anonymous"></script>
-	<meta name="generator" content="Hexo 6.2.0"></head>
+	<meta name="generator" content="Hexo 6.2.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 	<body>
 		
@@ -342,20 +343,20 @@
 </ol>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為最近想打看看 picoCTF，需要使用 Linux 環境。由於我使用的是 MacOS，他畢竟不是 Linux，雖然有些指令可以通用，但在程式執行結果上有很大的不同。於是我決定使用 lima 作為我的 Linux container，原本有想過要用 VMWare 虛擬機的方式，但是一想到每次我想打打 CTF 就要讓這台老 MacBook pro(late 2013)受苦就於心不忍。<br>事實也是如此，我一開 VMWare，老夥伴的風扇就又開始叫了🤧。</p>
 <h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>我是使用 <a target="_blank" rel="noopener" href="https://brew.sh/index_zh-tw">homebrew</a> 安裝的，記得到<a target="_blank" rel="noopener" href="https://brew.sh/index_zh-tw">官方網站</a>下載喔。先輸入以下指令。</p>
-<pre><code class="bash=">$ brew install lima # 安裝 lima
+<pre class="line-numbers language-bash="><code class="language-bash=">$ brew install lima # 安裝 lima
 $ limactl start # 安裝虛擬機
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>當出現以下畫面，使用方向鍵上下來選擇配置，我們只要用預設的就行了，所以直接按 enter，看到READY就是完成了！</p>
-<pre><code class="bash=">? Creating an instance &quot;default&quot;  [Use arrows to move, type to filter]
-&gt; Proceed with the default configuration
+<pre class="line-numbers language-bash="><code class="language-bash=">? Creating an instance "default"  [Use arrows to move, type to filter]
+> Proceed with the default configuration
   Open an editor to override the configuration
   Exit
 ...
 INFO[0111] READY. Run `lima` to open the shell.
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>下載完成可以執行<code>lima uname -a</code>來確認虛擬機已經在執行</p>
-<pre><code class="bash=">$ Linux lima-default 5.15.0-39-generic #42-Ubuntu SMP Thu Jun 9 23:42:32 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
-</code></pre>
+<pre class="line-numbers language-bash="><code class="language-bash=">$ Linux lima-default 5.15.0-39-generic #42-Ubuntu SMP Thu Jun 9 23:42:32 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>直接在終端機輸入<code>lima</code>就可以執行了，若要離開就直接輸入<code>exit</code>。<br>(<del>剛裝好時我還不知道怎麼離開，所以都用兩個 terminal 視窗，一個是 lima 一個是 zsh，不要跟我一樣蠢喔qq</del>)<br>如果沒有要使用虛擬機也記得關掉它，不然他會默默吃掉你的記憶體，輸入<code>lima stop [虛擬機名稱]</code> 來關閉虛擬機。</p>
 <p><img src="https://i.imgur.com/4v2K8Fw.png" alt="示意圖"></p>
 <p>至於容器的部分我還沒研究，這是 lima 的強項，它被號稱可以成為取代 docker 的 macOS Subsystem Linux。但畢竟我只是需要一個方便的 Linux 環境來練CTF，有興趣的朋友請參考<a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">lima原始碼</a>。</p>
@@ -363,17 +364,17 @@ INFO[0111] READY. Run `lima` to open the shell.
 <ol>
 <li>修改設定檔</li>
 </ol>
-<pre><code class="bash=">$ vim ~/.lima/default/lima.yaml # 先用 vim 編輯設定檔。
+<pre class="line-numbers language-bash="><code class="language-bash=">$ vim ~/.lima/default/lima.yaml # 先用 vim 編輯設定檔。
 # 有點長我就不貼上來了，找到 writable: null 並改成 writable: true
-writable: null -&gt; writable: true
-</code></pre>
+writable: null -> writable: true
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ol start="2">
 <li>重新跑 lima</li>
 </ol>
-<pre><code class="bash=">$ limactl list  這個指令可以列出所有正在執行的虛擬機，我看到的是名為 default 的虛擬機
+<pre class="line-numbers language-bash="><code class="language-bash=">$ limactl list  這個指令可以列出所有正在執行的虛擬機，我看到的是名為 default 的虛擬機
 $ limactl stop default  將它停止運行，default 可以替換成你的虛擬機名稱
 $ limactl start default  同上，default 可以替換成你的虛擬機名稱
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ol start="3">
 <li>恭喜你成功了！</li>
 </ol>

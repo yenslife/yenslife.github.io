@@ -37,7 +37,8 @@
 <meta name="google-site-verification" content="a_TQPwe8festWSXbDKfrpGIyv-Rm3LmV06g-8eysCOI" />
 <meta name="google-adsense-account" content="ca-pub-3446744309465814">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3446744309465814" crossorigin="anonymous"></script>
-	<meta name="generator" content="Hexo 6.2.0"></head>
+	<meta name="generator" content="Hexo 6.2.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 	<body>
 		
@@ -450,21 +451,21 @@
 <li>打開終端機 (terminal)。</li>
 <li>在終端機輸入以下指令，然後按 Enter。</li>
 </ol>
-<pre><code class="bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">/bin/bash -c <span class="token string">"<span class="token variable"><span class="token variable">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="token variable">)</span></span>"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>分享一些 Homebrew 基本指令：</p>
-<pre><code class="bash">brew install [套件名稱] // 安裝套件
+<pre class="line-numbers language-bash"><code class="language-bash">brew <span class="token function">install</span> <span class="token punctuation">[</span>套件名稱<span class="token punctuation">]</span> // 安裝套件
 
-brew uninstall [套件名稱] // 解除安裝
+brew uninstall <span class="token punctuation">[</span>套件名稱<span class="token punctuation">]</span> // 解除安裝
 
 brew update // 更新 brew 到最新版本
 
-brew upgrate [套件名稱] // 更新指定套件
+brew upgrate <span class="token punctuation">[</span>套件名稱<span class="token punctuation">]</span> // 更新指定套件
 
 brew list // 查看現有的套件以及 Cask
 
-brew search [關鍵字] // 查詢套件
-</code></pre>
+brew search <span class="token punctuation">[</span>關鍵字<span class="token punctuation">]</span> // 查詢套件
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>Homebrew Cask 是安裝 GUI 軟體在用的，使用方法同上，只是要在 brew 之後加上 <code>--cask</code></li>
 </ul>

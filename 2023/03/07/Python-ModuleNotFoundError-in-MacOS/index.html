@@ -37,7 +37,8 @@
 <meta name="google-site-verification" content="a_TQPwe8festWSXbDKfrpGIyv-Rm3LmV06g-8eysCOI" />
 <meta name="google-adsense-account" content="ca-pub-3446744309465814">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3446744309465814" crossorigin="anonymous"></script>
-	<meta name="generator" content="Hexo 6.2.0"></head>
+	<meta name="generator" content="Hexo 6.2.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 	<body>
 		
@@ -348,8 +349,8 @@
 </li>
 </ul>
 <p>會發現執行路徑和套件路徑不同，最好的解決方法就是不要用 <code>pip3 install</code>，改用</p>
-<pre><code class="bash">python3 -m pip install [套件名稱] # 用這個他就會幫你裝在 USER_SITE 底下了
-</code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">python3 -m pip <span class="token function">install</span> <span class="token punctuation">[</span>套件名稱<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 用這個他就會幫你裝在 USER_SITE 底下了</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><code>python3 -m pip install</code> 和 <code>pip3 install</code> 兩者的功能都是用來安裝 Python 套件，但是在執行上有些微的差異。</p>
 <p><code>python3 -m pip install</code> 是使用 Python 解釋器內建的 <code>pip</code> 模組進行安裝，透過 <code>-m</code> 參數指定模組名稱 <code>pip</code>，並且可以確保使用的是正確版本的 <code>pip</code>，避免了因為系統環境問題導致的版本不一致或是套件安裝到錯誤的位置的問題。</p>
 <p>而 <code>pip3 install</code> 則是直接呼叫系統上安裝的 <code>pip</code> 工具進行安裝，這種方式可能會因為系統環境或是 PATH 設定不正確而導致安裝錯誤或是套件安裝到錯誤的位置。</p>
