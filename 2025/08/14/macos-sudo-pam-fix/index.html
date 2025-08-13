@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<title>標籤:Mac-記錄、學習、生活</title>
+<title>在 MacOS 中如果意外把 /etc/pam.d/sudo 的東西改壞怎麼辦？(在 MacOS 中使用指紋來驗證 sudo)-記錄、學習、生活</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,8 +11,9 @@
 <link rel="stylesheet" href="/css/index.css">
 
 
-<meta name="keywords" content="yenslife,海狸大師,小潘,學習心得,小潘播落格,海狸大師部落格,潘駿諺">
-<meta name="description" content="記錄我的生活心得與學習筆記">
+
+<meta name="keywords" content="Mac,sudo,指紋,">
+<meta name="description" content="在 MacOS 中如果意外把 /etc/pam.d/sudo 的東西改壞怎麼辦？(在 MacOS 中使用指紋來驗證 sudo 遇到的問題)">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -40,7 +41,6 @@
 
 	<body>
 		
-
 	<div class="header">
 		<div class="header-top" id="header-top">
 			<div class="h-left">
@@ -79,13 +79,13 @@
 								
 									
 						
-							<li class="select">
-								<a href="/tags">
-									TAGS 🏷
-								</a>
-								<span class="dot"></span>
-							</li>
-							
+								<li>
+									<a href="/tags">
+										TAGS 🏷
+									</a>
+									<span class="dot"></span>
+								</li>
+								
 									
 						
 								<li>
@@ -290,73 +290,152 @@
 
 </script>
 
-
-
-
-<div class="tag">
-    <div class="header-body-background">
-    <div class="header-body-background-content">
-        <span>
-            <!--原本長這樣  <img src="https://i.imgur.com/cHZQ3Jy.jpg" alt="Quiet-home下一頁中間的圖示">-->
-            <img src="https://i.imgur.com/JcFZfLd.png" alt="Quiet">
-        </span>
-        <h2>文章標籤：Mac</h2>
-    </div>
-</div>
-    <div class="tag-content" id="content">
-        <div class="tag-content-data">
-            <div class="grouping">
-    
-        <p>
-            2025
-        </p>
+<div class="post">
+    <div class="post-header-background post-header-color"
+    style="background: url('')" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
+            
+            
+            <li><a href="/tags/Mac">Mac</a></li>
+            
+            <li><a href="/tags/sudo">sudo</a></li>
+            
+            <li><a href="/tags/指紋">指紋</a></li>
+            
+            
+        </ul>
         
-        <a href="/2025/08/14/macos-sudo-pam-fix/">
-            <span>在 MacOS 中如果意外把 /etc/pam.d/sudo 的東西改壞怎麼辦？(在 MacOS 中使用指紋來驗證 sudo)</span>
-            <time>08-14</time>
-        </a>
-        
-        
-        <p>
-            2023
-        </p>
-        
-        <a href="/2023/12/20/MacBook-Pro-Intel-Chip-Dual-System-Testing-Record/">
-            <span>Macbook pro (Intel 晶片)雙系統測試紀錄</span>
-            <time>12-20</time>
-        </a>
-        
-        <a href="/2023/03/07/Python-ModuleNotFoundError-in-MacOS/">
-            <span>Macbook 找不到 Python Module 解決方法</span>
-            <time>03-07</time>
-        </a>
-        
-        <a href="/2023/02/13/Mac-Linux-Ubuntu-partition-resize/">
-            <span>Mac (intel x86), Linux 雙系統、Ubuntu 切割硬碟紀錄</span>
-            <time>02-13</time>
-        </a>
-        
-        
-        <p>
-            2022
-        </p>
-        
-        <a href="/2022/08/26/useful-tools-for-mac/">
-            <span>Mac 實用小工具</span>
-            <time>08-26</time>
-        </a>
-        
-        <a href="/2022/07/05/use-lima-on-mac-as-linux-environment/">
-            <span>在 Mac 上使用 lima 作為 Linux 環境</span>
-            <time>07-05</time>
-        </a>
-        
-        
-</div>
+        <h1>在 MacOS 中如果意外把 /etc/pam.d/sudo 的東西改壞怎麼辦？(在 MacOS 中使用指紋來驗證 sudo)</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <g>
+                            <path fill="#12183A"
+                                d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                            </path>
+                        </g>
+                    </svg>
+                
+                <span class="post-header-info-author-text"> <a target="_blank" rel="noopener" href="https://github.com/yenslife">海狸大師</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                         <a href="../../../../categories/Mac/">Mac</a>
+                    
+                </div>
+                <p>2025-08-14 00:11:33</p>
+            </div>
         </div>
     </div>
 </div>
+    <div class="post-content" id="content">
+  <div id="article" class="post-content-info">
+    
+      <div style="text-align: center">
+  <p style="font-size:90%;">(為體驗最佳閱讀體驗，建議將 AdBlock 關閉，有些圖片可能會被擋掉)</p>
+</div>
 
+<h1 id="在-MacOS-中如果意外把-x2F-etc-x2F-pam-d-x2F-sudo-的東西改壞怎麼辦？"><a href="#在-MacOS-中如果意外把-x2F-etc-x2F-pam-d-x2F-sudo-的東西改壞怎麼辦？" class="headerlink" title="在 MacOS 中如果意外把 &#x2F;etc&#x2F;pam.d&#x2F;sudo 的東西改壞怎麼辦？"></a>在 MacOS 中如果意外把 &#x2F;etc&#x2F;pam.d&#x2F;sudo 的東西改壞怎麼辦？</h1><h2 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h2><p>我一開始是因為看到這個影片，作者 Chuck 提到的最後一個 MacOS terminal trick</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qOrlYzqXPa8?si=JKLwHGNJ3bNuOuvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>他說可以透過修改 <code>/etc/pam.d/sudo</code>，加入 <code>auth sufficent pam_tid.so</code> 來讓之後需要輸入 sudo 的地方都可以使用指紋來驗證，超帥超快的，特別是如果你的密碼很長，應該會輸入到很躁</p>
+<pre><code class="bash">cat /etc/pam.d/sudo
+# sudo: auth account password session
+auth sufficient     pam_tid.so
+auth       include        sudo_local
+auth       sufficient     pam_smartcard.so
+auth       required       pam_opendirectory.so
+account    required       pam_permit.so
+password   required       pam_deny.so
+session    required       pam_permit.so
+</code></pre>
+<p>但好笑的是，我不小心把 <code>pam_tid.so</code> 寫成 <code>pam_unix.so</code> (有時候用 GitHub copilot 還是要注意呀QQ)</p>
+<p>導致我存檔離開並打算用 <code>sudo</code> 的時候，出現 <code>sudo: unable to initialize PAM: No such file or directory</code>，意思就是 pam 設定檔錯誤，然後想要改這個檔案又需要 sudo 的權限，所以哈哈，尷尬了，悲劇了，完蛋了</p>
+<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>跟 Perplextiy 聊過之後，才知道這種系統層級的東西壞掉，在 MacOS 上可以透過「恢復模式」來修，在這個模式下的終端機預設就是 super user，所以只要用這個模式把 <code>/etc/pam.d/sudo</code> 改好就好了！</p>
+<p>以下是步驟</p>
+<ol>
+<li>關機</li>
+<li>按住電源鍵不放，直到出現「繼續按住來進入選項」</li>
+<li>這時候你可以選擇你的磁碟和選項，當然是要選擇「選項」，然後按下繼續</li>
+</ol>
+<p>Perplexity 跟我說可以用「磁碟工具程式」來選取掛載 <code>/etc</code> 的磁碟，然後進入終端機用 vi 去改。我後來發現其實不用這樣，這一步應該只是要確定這個 Volume 的名字而已，我最後是用以下命令來改</p>
+<p>至於進入終端機的方式，你可以看到螢幕最上方繪有一條 menu bar，那邊有一個地方可以開啟終端機</p>
+<pre><code class="bash">$ vi /Volumes/Macintosh\ HD/etc/pam.d/sudo
+</code></pre>
+<p>改好存檔之後，重新開機就可以用指紋來驗證 sudo 啦！！超酷的</p>
+<p><img src="https://i.meee.com.tw/CzGJ70z.png" alt="系統要求使用指紋來驗證 sudo 的截圖"></p>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+
+    
+    <a href="/2023/12/20/MacBook-Pro-Intel-Chip-Dual-System-Testing-Record/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>Macbook pro (Intel 晶片)雙系統測試紀錄</p>
+        </div>
+    </a>
+    
+</div>
+</div>
 		<div class="footer">
 	<div class="Copyright">
 		©2025 By yenslife 海狸大師 主題：<a

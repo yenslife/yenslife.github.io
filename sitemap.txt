@@ -1,3 +1,4 @@
+https://yenslife.top/2025/08/14/macos-sudo-pam-fix/
 https://yenslife.top/2022/08/26/useful-tools-for-mac/
 https://yenslife.top/about/index.html
 https://yenslife.top/2023/01/27/Ubuntu-remote-ssh-macbook/
@@ -47,6 +48,8 @@ https://yenslife.top/tags/%E5%BF%83%E7%90%86%E5%AD%B8/
 https://yenslife.top/tags/%E9%80%9A%E8%AD%98%E8%AA%B2%E5%BF%83%E5%BE%97/
 https://yenslife.top/tags/%E5%8B%95%E6%A9%9F/
 https://yenslife.top/tags/%E5%BF%83%E5%BE%97/
+https://yenslife.top/tags/sudo/
+https://yenslife.top/tags/%E6%8C%87%E7%B4%8B/
 https://yenslife.top/tags/test/
 https://yenslife.top/tags/Lima/
 https://yenslife.top/tags/picoCTF/
