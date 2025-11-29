@@ -520,7 +520,7 @@
 			
 			if (match) {
 				const [, year, month, day, title] = match;
-				const newUrl = `https://blog.yenslife.top/post/${title}/`;
+				const newUrl = `https://blog.yenslife.top/post/${title.toLowerCase()}/`;
 				
 				console.log('轉址文章:', title, '→', newUrl);
 				
