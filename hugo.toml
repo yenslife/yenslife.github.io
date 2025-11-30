@@ -1,0 +1,42 @@
+baseURL = 'https://yenslife.top/'
+languageCode = 'zh-tw'
+title = '海狸大師個人網站'
+theme = 'paper'
+enableEmoji = 'true'
+DefaultContentLanguage = "zh-tw"
+
+# ------------------------------
+
+[params]
+color = 'linen'
+github = 'yenslife'
+linkedin = 'yenslife'
+avatar = '77geo5rge6@gmail.com'
+name = '海狸大師'
+bio = 'LLM、資安、軟體工程師'
+# mainSections = ["post", ""]
+
+# ------------------------------
+
+
+[menu]
+  [[menu.main]]
+    identifier = "contact"
+    name = "聯絡我"
+    url = "/contact/"
+    weight = 20
+  [[menu.main]]
+    identifier = "publications"
+    name = "著作出版"
+    url = "/publications/"
+    weight = 50
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "https://blog.yenslife.top"
+    weight = 60
+  [[menu.main]]
+    identifier = "resume"
+    name = "履歷"
+    url = "https://yenslife.top/resume.pdf"
+    weight = 70

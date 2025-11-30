@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>Mac 實用小工具-記錄、學習、生活</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/yenslife-profile-pic.png">
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+
+<meta name="keywords" content="Mac,小工具,Menu bar,">
+<meta name="description" content="Mac 的實用小工具分享，選擇標準是只要有「如果當初有人告訴我去使用這個工具那該有多好」的感覺就會上榜">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+<meta name="google-site-verification" content="a_TQPwe8festWSXbDKfrpGIyv-Rm3LmV06g-8eysCOI" />
+<meta name="google-adsense-account" content="ca-pub-3446744309465814">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3446744309465814" crossorigin="anonymous"></script>
+	<meta name="generator" content="Hexo 6.2.0"></head>
+
+	<body>
+		
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/image/yenslife-profile-pic.png" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										HOME 🏠
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										ARCHIVE 🗄
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										CATEGORIES 🗂
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										TAGS 🏷
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										LINKS 🔗
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										ABOUT 關於我
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>yenslife 海狸大師</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">HOME 🏠</a>
+        </li>
+        
+        <li>
+            <a href="/archives">ARCHIVE 🗄</a>
+        </li>
+        
+        <li>
+            <a href="/categories">CATEGORIES 🗂</a>
+        </li>
+        
+        <li>
+            <a href="/tags">TAGS 🏷</a>
+        </li>
+        
+        <li>
+            <a href="/links">LINKS 🔗</a>
+        </li>
+        
+        <li>
+            <a href="/about">ABOUT 關於我</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/yenslife">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yenslife/">
+            <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=77geo5rge6@gmail.com">
+            <img src="https://i.imgur.com/ahajBaR.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/@yen_s_life">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384086.png " alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(https://i.imgur.com/HSJNrV2.jpg) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					width: "66%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					width: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script>
+
+<div class="post">
+    <div class="post-header-background post-header-color"
+    style="background: url('')" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
+            
+            
+            <li><a href="/tags/Mac">Mac</a></li>
+            
+            <li><a href="/tags/小工具">小工具</a></li>
+            
+            <li><a href="/tags/Menu bar">Menu bar</a></li>
+            
+            
+        </ul>
+        
+        <h1>Mac 實用小工具</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <g>
+                            <path fill="#12183A"
+                                d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                            </path>
+                        </g>
+                    </svg>
+                
+                <span class="post-header-info-author-text"> <a target="_blank" rel="noopener" href="https://github.com/yenslife">海狸大師</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                         <a href="../../../../categories/工具分享/">工具分享</a>
+                    
+                </div>
+                <p>2022-08-26 18:24:34</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="post-content" id="content">
+  <div id="article" class="post-content-info">
+    
+      <h6 id="tags-部落格文章-Mac-工具分享"><a href="#tags-部落格文章-Mac-工具分享" class="headerlink" title="tags: 部落格文章 Mac 工具分享"></a>tags: <code>部落格文章</code> <code>Mac</code> <code>工具分享</code></h6><h1 id="Mac-實用小工具（不定期更新！）"><a href="#Mac-實用小工具（不定期更新！）" class="headerlink" title="Mac 實用小工具（不定期更新！）"></a>Mac 實用小工具（不定期更新！）</h1><p>身為一個 Mac 筆電使用者，今天想跟大家分享我常用的小工具或軟體，不論在寫程式或者日常使用都很常用到的工具，只要有「如果當初有人告訴我去使用這個工具那該有多好」的感覺就會出現在目錄。順便提醒之後要換筆電的自己要裝什麼（雖然我應該沒錢換🤧）。有興趣可以裝來玩玩看，有些工具能節省你非常多時間！這篇文章不會太過著墨在操作方法以及安裝，主要是在分享。以下是目錄。</p>
+<div style="text-align: center">
+  <p style="font-size:90%;">(為體驗最佳閱讀體驗，建議將 AdBlock 關閉，有些圖片可能會被擋掉)</p>
+</div>
+
+
+<h2 id="桌面與系統相關（日常生活）"><a href="#桌面與系統相關（日常生活）" class="headerlink" title="桌面與系統相關（日常生活）"></a>桌面與系統相關（日常生活）</h2><ul>
+<li><a href="#Alfred%EF%BC%88Spotlight%E5%8D%87%E7%B4%9A%E7%89%88%EF%BC%89">Alfred（Spotlight 升級版）</a></li>
+<li><a href="#Rectangle%EF%BC%88%E8%A6%96%E7%AA%97%E8%AA%BF%E6%95%B4%E5%B7%A5%E5%85%B7%EF%BC%89">Rectangle（視窗調整工具）</a></li>
+<li><a href="#Bartander%EF%BC%88Menu-Bar-%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%EF%BC%89">Bartander（Menu-Bar-管理工具）</a></li>
+<li><a href="#Itsycal%EF%BC%88%E8%A1%8C%E4%BA%8B%E6%9B%86%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%89">Itsycal（行事曆小工具）</a></li>
+<li><a href="#Stats%EF%BC%88%E5%85%8D%E8%B2%BB%E9%96%8B%E6%BA%90%E7%9A%84%E7%B3%BB%E7%B5%B1%E8%B3%87%E6%BA%90%E7%9B%A3%E6%8E%A7%E8%BB%9F%E9%AB%94%EF%BC%89">Stats（免費開源的系統資源監控軟體）</a></li>
+<li><a href="#Gifski%EF%BC%88%E5%BD%B1%E7%89%87%E8%BD%89gif%E7%9A%84%E8%B6%85%E5%A5%BD%E7%94%A8%E5%B7%A5%E5%85%B7%EF%BC%89">Gifski（影片轉gif的超好用工具）</a></li>
+</ul>
+<h2 id="程式電腦相關（資工系可能會用到）"><a href="#程式電腦相關（資工系可能會用到）" class="headerlink" title="程式電腦相關（資工系可能會用到）"></a>程式電腦相關（資工系可能會用到）</h2><ul>
+<li><a href="#Homebrew%EF%BC%88%E7%A5%9E%E7%B4%9A%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%EF%BC%89">Homebrew（神級套件管理工具）</a></li>
+<li><a href="#iterm2%EF%BC%88%E6%9B%B4%E5%A5%BD%E7%9A%84teminal%EF%BC%89">iterm2（更好的 teminal）</a></li>
+<li><a href="#Fig%EF%BC%88%E7%B5%82%E7%AB%AF%E6%A9%9F%E8%87%AA%E5%8B%95%E8%A3%9C%E5%85%A8%EF%BC%89">Fig（終端機自動補全）</a></li>
+<li><a href="#Cloudflare-WARP-VPN%EF%BC%88%E5%85%8D%E8%B2%BB%E6%96%B9%E4%BE%BF%E7%9A%84vpn%EF%BC%89">Cloudflare WARP VPN（免費方便的 vpn）</a></li>
+</ul>
+<h2 id="其他（雜七雜八ㄉ東東）"><a href="#其他（雜七雜八ㄉ東東）" class="headerlink" title="其他（雜七雜八ㄉ東東）"></a>其他（雜七雜八ㄉ東東）</h2><ul>
+<li>一些設定（角落關螢幕、dock隱藏）</li>
+</ul>
+<br>
+
+<h3 id="Alfred（Spotlight升級版）"><a href="#Alfred（Spotlight升級版）" class="headerlink" title="Alfred（Spotlight升級版）"></a>Alfred（Spotlight升級版）</h3><p><img src="https://i.imgur.com/kB65WF7.png" alt="Alfred"></p>
+<p>它叫<a target="_blank" rel="noopener" href="https://www.alfredapp.com/">阿福</a>？因為他就像蝙蝠俠的管家一樣幫你從軟體到檔案管的好好的，只要按下 <code>command + space(空白鍵)</code> 就可以叫出來，幾乎可以實現不用滑鼠及觸控板的老鳥級操作，想叫什麼就叫什麼，可以讓自己的雙手幾乎是黏在鍵盤上！</p>
+<p>一開始要到 Preference 中做一些設定，並到<strong>系統偏好設定</strong>中把 Mac 內建的 Spotlight 改成 Alfred 即可使用（當然你想同時保留 Spotlight 或不想用 command + 空白鍵也可以）</p>
+<p><img src="https://i.imgur.com/mcIAeat.png"></p>
+<p>基本用法：command + 空白鍵 -&gt; 跳出搜尋欄，以下是我常用的搜尋關鍵字：</p>
+<div style="text-align: center">
+<img src="https://i.imgur.com/O9mKg0v.png" width="50%">
+    <p style="font-size:50%;">搜尋欄長這樣，也可以自訂喜歡的樣式</p>
+</div>
+
+<ul>
+<li>open + 檔案 -&gt; 開啟檔案</li>
+<li>find + 檔案 -&gt; 從 finder 找到檔案位置</li>
+<li>直接打軟體名稱 -&gt; 開啟軟體</li>
+<li>直接打搜尋內容 -&gt; 用瀏覽起開啟搜尋結果</li>
+</ul>
+<p>Alfred 唯一的小缺點就是要收費，聽說他還可以叫聯絡人和音樂等等，但我只需要基本功能，所以免費版就可以符合我的需求，進階玩法就留給大家試試咯。</p>
+<p>官網連結: <a target="_blank" rel="noopener" href="https://www.alfredapp.com/">https://www.alfredapp.com/</a></p>
+<br>
+
+<h3 id="Rectangle（視窗調整工具）"><a href="#Rectangle（視窗調整工具）" class="headerlink" title="Rectangle（視窗調整工具）"></a>Rectangle（視窗調整工具）</h3><div style="text-align: center">
+<img src="https://i.imgur.com/Hwwz1Ud.png" width="35%">
+</div>
+
+<p>不知道你有沒有這樣的經驗：打開軟體發現他的視窗位置很奇葩，又或是想同時用兩個視窗來做事情（邊看資料邊打字），於是花了一些時間調整視窗的 size 和位置，但就是沒辦法完美分割成兩個左右視窗？ 讓 <a target="_blank" rel="noopener" href="https://rectangleapp.com/">Rectangle</a> 幫你搞定吧！免費的真香～</p>
+<p>點擊 menu bar 上的圖示就可以看到所有功能快捷鍵了，主要都是透過 <code>control + alt(option) + 某個鍵</code> 來控制當下使用的視窗位置與大小。舉幾個我最常用的快捷鍵吧！</p>
+<div style="text-align: center">
+<img src="https://i.imgur.com/GmCrsSd.png" width="30%">
+    <p style="font-size:50%;">圖示長這樣</p>
+</div>
+
+
+<ul>
+<li><code>control + alt(option) + enter</code> -&gt; 最大化視窗</li>
+<li><code>control + alt(option) + 左/右方向鍵</code> -&gt; 左半&#x2F;右半</li>
+<li><code>control + alt(option) + B</code> -&gt; 接近最大化（有時候這樣蠻舒服的）</li>
+<li><code>control + alt(option) + C</code> -&gt; 中央視窗</li>
+<li><code>control + alt(option) + + / -</code> -&gt; 放大&#x2F;縮小視窗</li>
+</ul>
+<p>結果會像這樣：</p>
+<p><img src="https://i.imgur.com/rnr6a07.gif" alt="Rectangle 示範"></p>
+<p>官網連結：<a target="_blank" rel="noopener" href="https://rectangleapp.com/">https://rectangleapp.com/</a></p>
+<br>
+
+<h3 id="Bartander（Menu-Bar-管理工具）"><a href="#Bartander（Menu-Bar-管理工具）" class="headerlink" title="Bartander（Menu-Bar-管理工具）"></a>Bartander（Menu-Bar-管理工具）</h3><p><img src="https://i.imgur.com/hdWrFw3.png"></p>
+<p>因為我常常裝一些小工具在 Mac 上，一開始沒什麼，但當 Menu bar (螢幕右上角那個)上的東西越來越多時，情況開始不受控制，有些 icon 甚至會消失，Mac 居然沒有內建的管理工具，誇張！於是我找到了這款被人推崇的 <a target="_blank" rel="noopener" href="https://www.macbartender.com/">Bartender</a>，現在我的右上角看起來整齊多了！(如下，鼠標移到上方叫出所有圖示)</p>
+<p><img src="https://i.imgur.com/N2Pu8e8.gif" alt="bartender 自動"></p>
+<p>當然，你也可以自定義喜歡的樣式，像是隱藏的圖示，甚至是建立群組等等。他好像還有快捷鍵叫出的進階玩法，這部分就留給讀者玩玩看吧！</p>
+<p><img src="https://i.imgur.com/TFcWyrV.gif"></p>
+<p>唯一的小缺點就是：他要錢QQ。如果真的想體驗的話，網路上有很多免費(<del>盜版</del>)版本的可以下載，但有機會還是支持一下作者吧！他是買斷制的，目前是US$16.80。</p>
+<p>官網連結：<a target="_blank" rel="noopener" href="https://www.macbartender.com/">https://www.macbartender.com/</a></p>
+<br>
+
+<h3 id="Itsycal（行事曆小工具）"><a href="#Itsycal（行事曆小工具）" class="headerlink" title="Itsycal（行事曆小工具）"></a>Itsycal（行事曆小工具）</h3><p><img src="https://i.imgur.com/dSLqpBm.png"></p>
+<p><a target="_blank" rel="noopener" href="https://www.mowglii.com/itsycal/">Itsycal</a> 是一款 Menu bar 上的行事曆軟體。有時候看到一些活動是在下個月的某某號，想知道他是禮拜幾卻又不想打開行事曆的話，輕點右上角的 <a target="_blank" rel="noopener" href="https://www.mowglii.com/itsycal/">Itsycal</a> 圖示便能看到行事曆。若你有在使用 Mac 內建的行事曆，他甚至能幫你直接在 Menu bar 安排活動，不需要再多打開一個 app。</p>
+<p><img src="https://i.imgur.com/Y4OCUa1.gif"></p>
+<div style="text-align: center">
+<p style="font-size:50%;">效果展示</p>
+</div>
+
+<p>他還可以自訂圖示，有一套<a target="_blank" rel="noopener" href="https://www.mowglii.com/itsycal/datetime.html">語法</a>，不會太難，我沒有用因為 mac 就有內建的日期顯示了，所以用一個可愛的表情符號代替 ٩(◕‿◕｡)۶，只要進到 Preference 設定即可！</p>
+<p>免費的就是香，官網<a target="_blank" rel="noopener" href="https://www.mowglii.com/itsycal/datetime.html">連結</a></p>
+<br>
+
+<h3 id="Stats（免費開源的系統資源監控軟體）"><a href="#Stats（免費開源的系統資源監控軟體）" class="headerlink" title="Stats（免費開源的系統資源監控軟體）"></a>Stats（免費開源的系統資源監控軟體）</h3><p><img src="https://i.imgur.com/gGQ88ci.png"></p>
+<p>我們 Mac 使用者應該是不會太常把電腦關機吧（還是只有我這樣XD），有時候發現電腦開始變卡，不知道是哪個程序在搞，又不想打開「活動監視器」App 來看，這時候就可以透過 <a target="_blank" rel="noopener" href="https://github.com/exelban/stats">Stats</a> 來觀察執行程序 Ram 使用量，甚至是 GPU、CPU、網路、風扇等等的運作狀態。重點是，只要點右上角的圖示就可以看到了，超方便ㄉ！我之前覺得電腦卡卡的，看了 Stats 馬上就知道原來是虛擬機忘記關、或是我又開了什麼奇怪的程序XD。</p>
+<p><img src="https://i.imgur.com/HDqX4Jp.gif"></p>
+<div style="text-align:center">
+<p style="font-size:50%;">效果展示</p>
+</div>
+
+
+<p>Homebrew 安裝指令：<code>brew install --cask stats</code><br>官方 Github <a target="_blank" rel="noopener" href="https://github.com/exelban/stats">連結</a><br>下載 dmg 安裝檔 <a target="_blank" rel="noopener" href="https://github.com/exelban/stats/releases/latest/download/Stats.dmg">連結</a></p>
+<br>
+
+<h3 id="Gifski（影片轉gif的超好用工具）"><a href="#Gifski（影片轉gif的超好用工具）" class="headerlink" title="Gifski（影片轉gif的超好用工具）"></a>Gifski（影片轉gif的超好用工具）</h3><p><img src="https://i.imgur.com/WJBEHjS.png"></p>
+<p><a target="_blank" rel="noopener" href="https://apps.apple.com/tw/app/gifski/id1351639930?mt=12">Gifski</a> 是一款 mac 影片轉檔工具，轉檔完成後可以直接 copy 影片到剪貼簿，再貼到像是 HackMD 之類的的地方，非常方便。你可以在 App Store 上找到它，他是免費的，這篇文章的 Gif 大部分都是用它來做的呦！</p>
+<p><img src="https://i.imgur.com/TcAt0YH.gif"></p>
+<div style="text-align:center">
+<p style="font-size:50%;">將影片拖近來就可以轉檔，操作簡單明瞭</p>
+</div>
+
+<p>App Store <a target="_blank" rel="noopener" href="https://apps.apple.com/tw/app/gifski/id1351639930?mt=12">連結</a></p>
+<br>
+
+<h3 id="Homebrew（神級套件管理工具）"><a href="#Homebrew（神級套件管理工具）" class="headerlink" title="Homebrew（神級套件管理工具）"></a>Homebrew（神級套件管理工具）</h3><p><img src="https://i.imgur.com/aI1q8PU.png"></p>
+<p><a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a> 就像 Mac 版本的 apt (Linux 上的套件管理工具) ，可以在終端機 (terminal) 用指令來安裝套件、軟體等等。想像一下人家 Windows 還在解壓縮，你只要打幾個字就好了，這就是為什麼 Homebrew 如此滴神orz。</p>
+<p>安裝方法如下：</p>
+<ol>
+<li>打開終端機 (terminal)。</li>
+<li>在終端機輸入以下指令，然後按 Enter。</li>
+</ol>
+<pre><code class="bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+<p>分享一些 Homebrew 基本指令：</p>
+<pre><code class="bash">brew install [套件名稱] // 安裝套件
+
+brew uninstall [套件名稱] // 解除安裝
+
+brew update // 更新 brew 到最新版本
+
+brew upgrate [套件名稱] // 更新指定套件
+
+brew list // 查看現有的套件以及 Cask
+
+brew search [關鍵字] // 查詢套件
+</code></pre>
+<ul>
+<li>Homebrew Cask 是安裝 GUI 軟體在用的，使用方法同上，只是要在 brew 之後加上 <code>--cask</code></li>
+</ul>
+<br>
+
+<h3 id="iterm2（更好的teminal）"><a href="#iterm2（更好的teminal）" class="headerlink" title="iterm2（更好的teminal）"></a>iterm2（更好的teminal）</h3><p><img src="https://i.imgur.com/5uQ5ukT.png"></p>
+<p><a target="_blank" rel="noopener" href="https://iterm2.com/">iterm2</a> 是一款可以取代 Mac 原生 terminal 的好選擇，不信你看</p>
+<p><img src="https://i.imgur.com/S2ewQPq.png"></p>
+<p>是不是很漂亮ㄚ，通常 iterm2 會搭配 oh my zsh 框架使用，其實網路上已經有很多很棒的教學了，我覺得自己應該教不贏他們 (也忘記了XD) ，請自行 Google 搜尋一下ㄅ。（關鍵字：oh my zsh, iterm2 教學）</p>
+<p><a target="_blank" rel="noopener" href="https://iterm2.com/">iterm2 官網</a><br>Home brew 安裝：<code>brew install --cask iterm2</code></p>
+<br>
+
+<h3 id="Fig（終端機自動補全）"><a href="#Fig（終端機自動補全）" class="headerlink" title="Fig（終端機自動補全）"></a>Fig（終端機自動補全）</h3><p><img src="https://i.imgur.com/VUdtEMA.png"></p>
+<p>想不到吧？終端機竟然可以和 IDE 一樣自動補全指令，有了 Fig 就不用一直按 tab 鍵了，上下方向鍵即可選擇指令，安裝後即可發現新世界 (示範如下)，而且他是免費的！</p>
+<p><img src="https://i.imgur.com/MhpcGzM.gif"></p>
+<p><a target="_blank" rel="noopener" href="https://fig.io/">Fig 官網連結</a></p>
+<br>
+
+<h3 id="Cloudflare-WARP-VPN（免費方便的vpn）"><a href="#Cloudflare-WARP-VPN（免費方便的vpn）" class="headerlink" title="Cloudflare-WARP-VPN（免費方便的vpn）"></a>Cloudflare-WARP-VPN（免費方便的vpn）</h3><p><img src="https://i.imgur.com/yu4u6W8.png"></p>
+<p>如果你是成大的學生，剛好最近在研究加密貨幣投資，那你可能會用到「幣安」這個交易所對吧？但學校的網路居然把它給擋下來了QQ（學校網路總是擋了很多東西），剛好你又沒有使用 VPN 的服務，這時候 <a target="_blank" rel="noopener" href="https://1.1.1.1/">Warp VPN</a> 就可以幫你一個大忙了！他是 Cloudflare 公司免費提供的 VPN 服務，不用擔心隱私問題，只要點擊 Menu bar 上的雲朵圖示即可使用！</p>
+<div style="text-align:center">
+<img src="https://i.imgur.com/DOhXUCZ.gif" width="30%">
+<p style="font-size:50%">簡潔有力的使用方式</p>
+</div>
+
+<p>官網網址：<a target="_blank" rel="noopener" href="https://1.1.1.1/">https://1.1.1.1/</a></p>
+<h3 id="Clipy"><a href="#Clipy" class="headerlink" title="Clipy"></a>Clipy</h3><p>Mac 剪貼簿歷史紀錄功能，按下 <code>command + shift + v</code> 即可叫出歷史紀錄，可以設定紀錄筆數，非常方便！</p>
+<p><a target="_blank" rel="noopener" href="https://clipy-app.com/">官網連結</a></p>
+<p><img src="https://imgur.com/cjLMYWs.png"></p>
+<h3 id="Bob"><a href="#Bob" class="headerlink" title="Bob"></a>Bob</h3><p>OCR 文字識別工具，可以將圖片上的文字轉成文字檔，很適合在有時候線上 meeting 時需要快速記錄文字的時候使用，真的太多時候用到了！重點是他是免費的！</p>
+<p>使用方法：<code>optoin + s</code> 即可叫出，然後圈選出你要識別的區域，就像 Mac 的 <code>command + shift + 4</code> 截圖一樣</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ripperhe/Bob">https://github.com/ripperhe/Bob</a></p>
+<p><img src="https://imgur.com/DCTvH5s.gif"></p>
+<h3 id="一些設定（角落關螢幕、dock隱藏）"><a href="#一些設定（角落關螢幕、dock隱藏）" class="headerlink" title="一些設定（角落關螢幕、dock隱藏）"></a>一些設定（角落關螢幕、dock隱藏）</h3><p>(待補)</p>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+    <a href="/2023/01/27/ubuntu-remote-ssh-macbook/">
+        <div class="post-paging-last">
+            <span>上一篇</span>
+            <p>Mac 遠端 ssh 連線到 Ubuntu</p>
+        </div>
+    </a>
+    
+
+    
+    <a href="/2022/07/11/uva10190/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>UVa10190：Divide, But Not Quite Conquer!</p>
+        </div>
+    </a>
+    
+</div>
+</div>
+		<div class="footer">
+	<div class="Copyright">
+		©2025 By yenslife 海狸大師 主題：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/yenslife">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yenslife/">
+			<img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=77geo5rge6@gmail.com">
+			<img src="https://i.imgur.com/ahajBaR.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://www.youtube.com/@yen_s_life">
+			<img src="https://cdn-icons-png.flaticon.com/512/1384/1384086.png " alt="Quiet主题">
+		</a>
+		
+	</div>
+</div>
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+    
+    @media screen and (max-width: 600px) {
+        /* 這邊是手機的 gotop css by yenslife */
+        /* .goTop {
+            display: none;
+        } */
+
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(114, 118, 124, 0.41);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680b3ad;
+        }
+
+
+        .goTop {
+            z-index: 100; /*這個可以讓他跑到最上面 by yenslife*/
+            position: fixed;
+            right: 30px;
+            bottom: 40px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+        
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script>
+
+
+    <!-- Gitalk -->
+    <script>
+        const data = '{"clientID":"c20c4a2ca9eb54b6fb62","clientSecret":"9fdd5ccd56fd56b5d06818a4cbc6993e92be5c3d","repo":"yenslife.github.io","owner":"yenslife","admin":"yenslife"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+        gitalk.render('gitalk-container')
+    </script>
+
+<script>
+	console.log('\n %c Hexo-Quiet 主題 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+	
+	// 文章轉址邏輯 - 將舊文章轉址到新網站
+	function checkPostRedirect() {
+		const currentHost = window.location.hostname;
+		const currentPath = window.location.pathname;
+		
+		// 只在舊域名或本地測試執行轉址
+		if (currentHost === 'yenslife.top' || currentHost === 'www.yenslife.top' || currentHost === 'localhost' || currentHost === '127.0.0.1') {
+			// 檢查是否為文章頁面格式: /2025/08/14/article-title/
+			const postPattern = /^\/(\d{4})\/(\d{2})\/(\d{2})\/([^\/]+)\/?$/;
+			const match = currentPath.match(postPattern);
+			
+			if (match) {
+				const [, year, month, day, title] = match;
+				const newUrl = `https://blog.yenslife.top/post/${title.toLowerCase()}/`;
+				
+				console.log('轉址文章:', title, '→', newUrl);
+				
+				// 顯示轉址頁面
+				document.body.innerHTML = `
+					<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 100px auto; padding: 20px; text-align: center; line-height: 1.6;">
+						<h2 style="color: #333; margin-bottom: 20px;">文章已移動</h2>
+						<p style="color: #666; margin-bottom: 20px;">
+							此文章已移動到新網址，將在 <span id="countdown">5</span> 秒後自動跳轉。<br>
+							如果沒有自動跳轉，請<a href="${newUrl}" style="color: #007acc;">點擊這裡</a>。
+						</p>
+						<div style="width: 100%; height: 4px; background: #f0f0f0; border-radius: 2px; overflow: hidden; margin: 20px 0;">
+							<div id="progress" style="height: 100%; background: #007acc; transition: width 5s linear;"></div>
+						</div>
+					</div>
+				`;
+				
+				// 進度條和倒數計時
+				document.getElementById('progress').style.width = '0%';
+				let countdown = 5;
+				const timer = setInterval(() => {
+					countdown--;
+					document.getElementById('countdown').textContent = countdown;
+					if (countdown <= 0) {
+						clearInterval(timer);
+						window.location.href = newUrl;
+					}
+				}, 1000);
+				
+				// SEO meta refresh
+				const meta = document.createElement('meta');
+				meta.httpEquiv = 'refresh';
+				meta.content = '5;url=' + newUrl;
+				document.head.appendChild(meta);
+			}
+		}
+	}
+	
+	// 執行轉址檢查
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', checkPostRedirect);
+	} else {
+		checkPostRedirect();
+	}
+</script>
+	</body>
+</html>
+

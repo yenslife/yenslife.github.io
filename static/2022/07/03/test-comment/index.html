@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>文章評論測試-記錄、學習、生活</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/yenslife-profile-pic.png">
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+
+<meta name="keywords" content="test,">
+<meta name="description" content="這次用英文檔名，中文標題試試">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+<meta name="google-site-verification" content="a_TQPwe8festWSXbDKfrpGIyv-Rm3LmV06g-8eysCOI" />
+<meta name="google-adsense-account" content="ca-pub-3446744309465814">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3446744309465814" crossorigin="anonymous"></script>
+	<meta name="generator" content="Hexo 6.2.0"></head>
+
+	<body>
+		
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/image/yenslife-profile-pic.png" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										HOME 🏠
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										ARCHIVE 🗄
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										CATEGORIES 🗂
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										TAGS 🏷
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										LINKS 🔗
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										ABOUT 關於我
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>yenslife 海狸大師</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">HOME 🏠</a>
+        </li>
+        
+        <li>
+            <a href="/archives">ARCHIVE 🗄</a>
+        </li>
+        
+        <li>
+            <a href="/categories">CATEGORIES 🗂</a>
+        </li>
+        
+        <li>
+            <a href="/tags">TAGS 🏷</a>
+        </li>
+        
+        <li>
+            <a href="/links">LINKS 🔗</a>
+        </li>
+        
+        <li>
+            <a href="/about">ABOUT 關於我</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/yenslife">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yenslife/">
+            <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=77geo5rge6@gmail.com">
+            <img src="https://i.imgur.com/ahajBaR.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/@yen_s_life">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384086.png " alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(https://i.imgur.com/HSJNrV2.jpg) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					width: "66%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					width: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script>
+
+<div class="post">
+    <div class="post-header-background post-header-color"
+    style="background: url('')" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
+            
+            
+            <li><a href="/tags/test">test</a></li>
+            
+            
+        </ul>
+        
+        <h1>文章評論測試</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <g>
+                            <path fill="#12183A"
+                                d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                            </path>
+                        </g>
+                    </svg>
+                
+                <span class="post-header-info-author-text"> <a target="_blank" rel="noopener" href="https://github.com/yenslife">海狸大師</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                         <a href="../../../../categories/測試用/">測試用</a>
+                    
+                </div>
+                <p>2022-07-03 18:42:02</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="post-content" id="content">
+  <div id="article" class="post-content-info">
+    
+      <h1 id="Gitalk-評論測試文章"><a href="#Gitalk-評論測試文章" class="headerlink" title="Gitalk 評論測試文章"></a>Gitalk 評論測試文章</h1><p>今天發現如果文章標題用中文的話，因為中文編碼的關係，Github issue 的 label 長度很容易就超過 50 個字元，為了解決我找到了<a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk/issues/102">這篇關於 gitalk 的 issue</a>，經過<a target="_blank" rel="noopener" href="https://priesttomb.github.io/%E6%97%A5%E5%B8%B8/2018/02/12/%E5%A4%84%E7%90%86Gitalk%E4%B8%AD%E7%94%B1%E4%BA%8E%E6%96%87%E7%AB%A0URL%E8%BF%87%E9%95%BF%E5%AF%BC%E8%87%B4%E7%9A%84Validation-Failed(422)/">某位大佬的文章</a> 試著解決它QAQ，但即使我照著他們的方法做了依舊無法解決問題，於是我在想 <code>label</code> 是不是用文章的檔名來決定的，經過實驗發現真的是！所以改變一下思路，不要去糾結怎麼減少標籤的字元了，直接用英文命名就好啦，像這篇文章就是從<code>hexo new post test-comment</code>來的呢！。</p>
+<blockquote>
+<p>以後都使用 <code>hexo new post 英文檔名</code>，再改 title 就行了</p>
+</blockquote>
+<p><img src="https://i.imgur.com/PeV2ICZ.png" alt="改標題"><br><img src="https://i.imgur.com/GGealGn.png" alt="英文檔名"></p>
+<h1 id="結論："><a href="#結論：" class="headerlink" title="結論："></a>結論：</h1><p>山不轉，路轉。路不轉，人轉。當然這是最後手段啦，誰叫我對網頁還有 javascript 都不太熟QQ，花太多時間在 Google 反而讓自己需要填的”知識坑”越來越大，中途還意外讓自己的程式碼區塊跑掉，差點心態就沒了🤧。</p>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+    <a href="/2022/07/05/use-lima-on-mac-as-linux-environment/">
+        <div class="post-paging-last">
+            <span>上一篇</span>
+            <p>在 Mac 上使用 lima 作為 Linux 環境</p>
+        </div>
+    </a>
+    
+
+    
+    <a href="/2022/07/03/%E6%96%87%E7%AB%A0%E5%9C%96%E7%89%87%E6%B8%AC%E8%A9%A6/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>文章圖片測試</p>
+        </div>
+    </a>
+    
+</div>
+</div>
+		<div class="footer">
+	<div class="Copyright">
+		©2025 By yenslife 海狸大師 主題：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/yenslife">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yenslife/">
+			<img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=77geo5rge6@gmail.com">
+			<img src="https://i.imgur.com/ahajBaR.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://www.youtube.com/@yen_s_life">
+			<img src="https://cdn-icons-png.flaticon.com/512/1384/1384086.png " alt="Quiet主题">
+		</a>
+		
+	</div>
+</div>
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+    
+    @media screen and (max-width: 600px) {
+        /* 這邊是手機的 gotop css by yenslife */
+        /* .goTop {
+            display: none;
+        } */
+
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(114, 118, 124, 0.41);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680b3ad;
+        }
+
+
+        .goTop {
+            z-index: 100; /*這個可以讓他跑到最上面 by yenslife*/
+            position: fixed;
+            right: 30px;
+            bottom: 40px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+        
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script>
+
+
+    <!-- Gitalk -->
+    <script>
+        const data = '{"clientID":"c20c4a2ca9eb54b6fb62","clientSecret":"9fdd5ccd56fd56b5d06818a4cbc6993e92be5c3d","repo":"yenslife.github.io","owner":"yenslife","admin":"yenslife"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+        gitalk.render('gitalk-container')
+    </script>
+
+<script>
+	console.log('\n %c Hexo-Quiet 主題 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+	
+	// 文章轉址邏輯 - 將舊文章轉址到新網站
+	function checkPostRedirect() {
+		const currentHost = window.location.hostname;
+		const currentPath = window.location.pathname;
+		
+		// 只在舊域名或本地測試執行轉址
+		if (currentHost === 'yenslife.top' || currentHost === 'www.yenslife.top' || currentHost === 'localhost' || currentHost === '127.0.0.1') {
+			// 檢查是否為文章頁面格式: /2025/08/14/article-title/
+			const postPattern = /^\/(\d{4})\/(\d{2})\/(\d{2})\/([^\/]+)\/?$/;
+			const match = currentPath.match(postPattern);
+			
+			if (match) {
+				const [, year, month, day, title] = match;
+				const newUrl = `https://blog.yenslife.top/post/${title.toLowerCase()}/`;
+				
+				console.log('轉址文章:', title, '→', newUrl);
+				
+				// 顯示轉址頁面
+				document.body.innerHTML = `
+					<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 100px auto; padding: 20px; text-align: center; line-height: 1.6;">
+						<h2 style="color: #333; margin-bottom: 20px;">文章已移動</h2>
+						<p style="color: #666; margin-bottom: 20px;">
+							此文章已移動到新網址，將在 <span id="countdown">5</span> 秒後自動跳轉。<br>
+							如果沒有自動跳轉，請<a href="${newUrl}" style="color: #007acc;">點擊這裡</a>。
+						</p>
+						<div style="width: 100%; height: 4px; background: #f0f0f0; border-radius: 2px; overflow: hidden; margin: 20px 0;">
+							<div id="progress" style="height: 100%; background: #007acc; transition: width 5s linear;"></div>
+						</div>
+					</div>
+				`;
+				
+				// 進度條和倒數計時
+				document.getElementById('progress').style.width = '0%';
+				let countdown = 5;
+				const timer = setInterval(() => {
+					countdown--;
+					document.getElementById('countdown').textContent = countdown;
+					if (countdown <= 0) {
+						clearInterval(timer);
+						window.location.href = newUrl;
+					}
+				}, 1000);
+				
+				// SEO meta refresh
+				const meta = document.createElement('meta');
+				meta.httpEquiv = 'refresh';
+				meta.content = '5;url=' + newUrl;
+				document.head.appendChild(meta);
+			}
+		}
+	}
+	
+	// 執行轉址檢查
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', checkPostRedirect);
+	} else {
+		checkPostRedirect();
+	}
+</script>
+	</body>
+</html>
+
