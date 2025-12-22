@@ -6,10 +6,10 @@ aliases = ["publications"]
 author = "海狸大師 (yenslife)"
 +++
 
-##  (即將出版...)《會 Python 就可以玩生成式 AI 應用？》
+##  (即將出版...)《零基礎玩轉 LLM 應用全攻略：Python × No-Code 實作 AI 開發超簡單》
 **📝 目前進度：** 已完成交稿，正在等待出版社排程印刷，預計近期上市！
 
-第 16 屆 (2024) IThome 鐵人賽「生成式 AI 組」冠軍作品延伸
+第 16 屆 (2024) IThome 鐵人賽「生成式 AI 組」冠軍作品《[Python 新手的 AI 之旅：從零開始打造屬於你的 AI / LLM 應用](https://ithelp.ithome.com.tw/users/20168885/ironman/7699)》延伸
 
 這是一本專為 Python 新手設計的 LLM 應用開發指南，書中前半段帶你用 Python 實作各種 LLM 應用，後半段則介紹如何使用 No-Code 工具 Dify 來開發複雜度更高的工作流。全書以國中數學程度為基礎，避免深澀的數學公式，專注於實用性的應用開發。
 
