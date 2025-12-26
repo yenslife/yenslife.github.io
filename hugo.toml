@@ -14,6 +14,7 @@ linkedin = 'yenslife'
 avatar = '77geo5rge6@gmail.com'
 name = '海狸大師'
 bio = 'LLM、資安、軟體工程師'
+favicon = 'favicon.svg'
 # mainSections = ["post", ""]
 
 # ------------------------------
