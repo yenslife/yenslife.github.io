@@ -9,7 +9,7 @@ aliases = ["/about/"]
 
 ## 工作經驗
 
-**2025/07 - 2025/08** | **RPA Coach** - [EMILY.RPA](https://www.rpa.emily.tips/)
+**2025/07 - 2025/08** | **RPA Coach Intern** - [EMILY.RPA](https://www.rpa.emily.tips/)
 - 地點：新北市（遠距）
 - 職責：協助企業導入系統瀏覽器自動化，開發端到端 RPA 工作流程
 - 技能：JavaScript, Robotic Process Automation (RPA)
