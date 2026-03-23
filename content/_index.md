@@ -26,7 +26,7 @@ aliases = ["/about/"]
 ## 學經歷
 
 **2025 - now** | **國立成功大學 資訊工程學系 碩士班**
-
+- Intelligent System and Media Processing (ISMP) Lab
 
 **2021 - 2025** | **國立成功大學 資訊工程學系 學士班**
 - 專題：可生成摘要與輔助教學的 Chatbot 及高效學習平台 ([介紹影片](https://youtu.be/cuVu4kC0dFI?si=grFKZEH0pUOJw2rX))
