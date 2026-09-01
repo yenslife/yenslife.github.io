@@ -10,19 +10,22 @@ author = "海狸大師 (yenslife)"
 
 {{< figure
   src="./book-cover.webp"
-  alt="書籍封面"
+  alt="《零基礎玩轉 LLM 應用全攻略》書籍封面"
   width="320"
   link="https://llm-book.yenslife.top"
   target="_blank"
   rel="noopener noreferrer"
 >}}
 
-目前進度：正在等待出版社排程印刷，預計近期上市！🎉🎉🎉🎉
+**2026 年 2 月由博碩文化正式出版。**
 
-第 16 屆 (2024) IThome 鐵人賽「生成式 AI 組」冠軍系列《[Python 新手的 AI 之旅：從零開始打造屬於你的 AI / LLM 應用](https://ithelp.ithome.com.tw/users/20168885/ironman/7699)》的延伸作品。
+本書延伸自我在第 16 屆（2024）iThome 鐵人賽「生成式 AI 組」獲得冠軍的 30 天系列文章《[Python 新手的 AI 之旅：從零開始打造屬於你的 AI / LLM 應用](https://ithelp.ithome.com.tw/users/20168885/ironman/7699)》。
 
-這是一本專為 Python 新手設計的 LLM 應用開發指南，書中前半段帶你用 Python 實作各種 LLM 應用，後半段則介紹如何使用 No-Code 工具 Dify 來開發複雜度更高的工作流。全書以國中數學程度為基礎，避免深澀的數學公式，專注於實用性的應用開發。
+這是一本以實作為核心的 LLM 應用開發指南。前半部從 Python 出發，介紹如何實際串接與開發各種 LLM 應用；後半部則使用 No-Code 工具 Dify，逐步建立包含 Prompt、RAG、Memory、Tool Use 等元件的進階工作流程。
 
-無論你是剛學 Python 想做點酷酷專案的新手，還是對 AI 有興趣但被數學門檻擋住的人，這本書都很適合你。當然，如果你想成為下一個台灣 AI 新創獨角獸的 CEO，或者不怕被說是「套模仔」的工程師，這本書也能給你很多啟發。
+本書希望降低第一次接觸 LLM 應用開發時的門檻，因此不要求深厚的數學背景，而是從「如何把模型真正做成可以使用的應用」出發，帶讀者理解 LLM application development 的核心概念與實作方法。
 
-**相關連結：** [書籍網站](https://llm-book.yenslife.top) | [IThome 鐵人賽系列文](https://ithelp.ithome.com.tw/users/20168885/ironman/7699) | [購買連結](https://llm-book.yenslife.top/buy.html)
+適合剛開始學 Python、想實際做 AI 專案的開發者，也適合希望快速理解 LLM、RAG 與 AI workflow 如何落地的人。
+
+**相關連結：**  
+[書籍網站](https://llm-book.yenslife.top) | [購買連結](https://llm-book.yenslife.top/buy.html) | [iThome 鐵人賽系列文](https://ithelp.ithome.com.tw/users/20168885/ironman/7699)
